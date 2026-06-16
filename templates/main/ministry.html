@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}{% trans "Министерство" %} — Кочкор-Атинский региональный колледж{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    {% if ministry %}
+
+    <div class="about-card mb-4">
+        <div class="about-card-head">
+            <i class="fas fa-landmark adm-icon"></i>
+            <h5>{{ ministry.title }}</h5>
+        </div>
+        <div class="about-card-body">
+            <div class="row g-4 align-items-start">
+
+                {% if ministry.logo %}
+                <div class="col-lg-3 text-center">
+                    <img src="{{ ministry.logo.url }}" alt="{{ ministry.title }}"
+                         class="img-fluid rounded shadow-sm" style="max-height:200px;object-fit:contain;">
+                </div>
+                {% endif %}
+
+                <div class="{% if ministry.logo %}col-lg-9{% else %}col-12{% endif %}">
+                    {% if ministry.description %}
+                    <p class="lead mb-3">{{ ministry.description }}</p>
+                    {% endif %}
+
+                    {% if ministry.content %}
+                    <div class="about-text">{{ ministry.content|safe }}</div>
+                    {% endif %}
+
+                    {% if ministry.website_url %}
+                    <div class="mt-4">
+                        <a href="{{ ministry.website_url }}" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>{% trans "Официальный сайт" %}
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+    <div class="about-card mb-4">
+        <div class="about-card-head">
+            <i class="fas fa-landmark adm-icon"></i>
+            <h5>Министерство науки, высшего образования и инноваций Кыргызской Республики</h5>
+        </div>
+        <div class="about-card-body">
+            <p class="about-text">
+                Информация о министерстве будет добавлена через панель администратора.
+                Перейдите в <a href="/admin/main/ministrypage/add/">Админ → Страница Министерства</a> и заполните данные.
+            </p>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Абитуриентам — Кочкор-Атинский региональный колледж{% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5">
+
+    {% if admission %}
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-clipboard-list"></i>
+                    <h5>Условия приёма</h5>
+                </div>
+                <div class="adm-card-body">{{ admission.conditions|linebreaks }}</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-folder-open"></i>
+                    <h5>Необходимые документы</h5>
+                </div>
+                <div class="adm-card-body">{{ admission.required_documents|linebreaks }}</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-money-bill-wave"></i>
+                    <h5>Стоимость обучения</h5>
+                </div>
+                <div class="adm-card-body">{{ admission.tuition_cost|linebreaks }}</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-calendar-alt"></i>
+                    <h5>Сроки подачи документов</h5>
+                </div>
+                <div class="adm-card-body">{{ admission.deadlines|linebreaks }}</div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="adm-card">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-phone-alt"></i>
+                    <h5>Контакты приёмной комиссии</h5>
+                </div>
+                <div class="adm-card-body">{{ admission.committee_contacts|linebreaks }}</div>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+
+    <!-- ── Fallback: hardcoded content ── -->
+    <div class="row g-4">
+
+        <!-- Условия приёма -->
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-clipboard-list"></i>
+                    <h5>Условия приёма</h5>
+                </div>
+                <div class="adm-card-body">
+                    <ul>
+                        <li>Наличие аттестата об основном общем образовании (9 кл.) или среднем общем образовании (11 кл.)</li>
+                        <li>Возраст от 15 лет</li>
+                        <li>Медицинская справка о состоянии здоровья (форма 086/у)</li>
+                        <li>Гражданство Кыргызской Республики</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Необходимые документы -->
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-folder-open"></i>
+                    <h5>Необходимые документы</h5>
+                </div>
+                <div class="adm-card-body">
+                    <ul>
+                        <li>Заявление на имя директора</li>
+                        <li>Аттестат об образовании (оригинал + копия)</li>
+                        <li>Свидетельство о рождении (копия)</li>
+                        <li>Паспорт / ID-карта (копия)</li>
+                        <li>Медицинская справка (форма 086/у)</li>
+                        <li>6 фотографий 3×4 см</li>
+                        <li>Флюорография</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Стоимость -->
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-money-bill-wave"></i>
+                    <h5>Стоимость обучения</h5>
+                </div>
+                <div class="adm-card-body">
+                    <div class="adm-cost-row">
+                        <div class="adm-cost-item">
+                            <div class="adm-cost-icon"><i class="fas fa-landmark"></i></div>
+                            <div>
+                                <div class="adm-cost-label">Бюджетная форма</div>
+                                <div class="adm-cost-val">Бесплатно</div>
+                            </div>
+                        </div>
+                        <div class="adm-cost-item">
+                            <div class="adm-cost-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                            <div>
+                                <div class="adm-cost-label">Контрактная форма</div>
+                                <div class="adm-cost-val">Уточнить в приёмной комиссии</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adm-note mt-3">
+                        <i class="fas fa-info-circle me-2"></i>Возможна оплата в рассрочку
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сроки -->
+        <div class="col-lg-6">
+            <div class="adm-card h-100">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-calendar-alt"></i>
+                    <h5>Сроки подачи документов</h5>
+                </div>
+                <div class="adm-card-body">
+                    <div class="timeline-row">
+                        <div class="tl-item">
+                            <div class="tl-dot" style="background:var(--primary)">1</div>
+                            <div class="tl-text">
+                                <strong>Июнь — Август</strong>
+                                <p>Приём документов в приёмной комиссии</p>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="background:var(--accent)">2</div>
+                            <div class="tl-text">
+                                <strong>Август — Сентябрь</strong>
+                                <p>Зачисление, оформление документов</p>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="background:var(--gold)">3</div>
+                            <div class="tl-text">
+                                <strong>1 сентября</strong>
+                                <p>Начало учебного года</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контакты приёмной комиссии -->
+        <div class="col-12">
+            <div class="adm-card">
+                <div class="adm-card-head">
+                    <i class="adm-icon fas fa-phone-alt"></i>
+                    <h5>Контакты приёмной комиссии</h5>
+                </div>
+                <div class="adm-card-body">
+                    {% if contact %}
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="adm-contact-item">
+                                <div class="adm-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <div class="adm-cost-label">Адрес</div>
+                                    <div class="adm-cost-val">{{ contact.address }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="adm-contact-item">
+                                <div class="adm-contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <div class="adm-cost-label">Телефон</div>
+                                    <div class="adm-cost-val">
+                                        <a href="tel:{{ contact.phone }}" style="color:var(--primary)">{{ contact.phone }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="adm-contact-item">
+                                <div class="adm-contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <div class="adm-cost-label">Email</div>
+                                    <div class="adm-cost-val">
+                                        <a href="mailto:{{ contact.email }}" style="color:var(--primary)">{{ contact.email }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <p class="text-muted mb-0" style="font-size:14px">
+                        <i class="fas fa-info-circle me-2 text-primary"></i>
+                        Контактные данные уточняйте в приёмной комиссии лично.
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

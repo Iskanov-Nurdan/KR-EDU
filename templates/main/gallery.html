@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Галерея — Кочкор-Атинский региональный колледж{% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5">
+
+    <!-- Category Filter -->
+    {% if categories %}
+    <div class="gallery-filter mb-4 d-flex flex-wrap gap-2 justify-content-center">
+        <a href="{% url 'gallery' %}" class="btn {% if not current_category %}btn-primary{% else %}btn-outline-primary{% endif %}">
+            <i class="fas fa-th me-1"></i>Все
+        </a>
+        {% for cat in categories %}
+        <a href="{% url 'gallery' %}?category={{ cat.id }}"
+           class="btn {% if current_category == cat.id|stringformat:'s' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+            {{ cat.name }}
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Photos Grid -->
+    {% if photos %}
+    <div class="row g-3" id="gallery-grid">
+        {% for photo in photos %}
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal{{ photo.id }}">
+                <img src="{{ photo.image.url }}" alt="{{ photo.title }}" class="img-fluid">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus fa-lg"></i>
+                    <p class="gallery-item-title">{{ photo.title }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for each photo -->
+        <div class="modal fade" id="galleryModal{{ photo.id }}" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark border-0">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center pt-0">
+                        <img src="{{ photo.image.url }}" alt="{{ photo.title }}" class="img-fluid rounded">
+                        <p class="text-white mt-3 mb-0">{{ photo.title }}</p>
+                        {% if photo.category %}
+                        <small class="text-white-50">{{ photo.category.name }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="text-center py-5">
+        <i class="fas fa-images fa-4x text-muted mb-3"></i>
+        <h4 class="text-muted">Фотографии пока не добавлены</h4>
+        <p class="text-muted">Фотографии появятся здесь после добавления через панель администратора.</p>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

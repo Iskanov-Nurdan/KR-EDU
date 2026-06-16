@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Контакты — Кочкор-Атинский региональный колледж{% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5">
+    <div class="row g-4">
+
+        <!-- Контактная информация -->
+        <div class="col-lg-5">
+            <div class="about-card h-100">
+                <div class="about-card-head">
+                    <i class="fas fa-address-card adm-icon"></i>
+                    <h5>Контактная информация</h5>
+                </div>
+                <div class="about-card-body p-0">
+                    {% if contact %}
+                    <div class="ct-item">
+                        <div class="ct-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="ct-label">Адрес</div>
+                            <div class="ct-value">{{ contact.address }}</div>
+                        </div>
+                    </div>
+                    <div class="ct-item">
+                        <div class="ct-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="ct-label">Телефон</div>
+                            <div class="ct-value">
+                                <a href="tel:{{ contact.phone }}">{{ contact.phone }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ct-item">
+                        <div class="ct-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="ct-label">Email</div>
+                            <div class="ct-value">
+                                <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ct-item" style="border-bottom:none">
+                        <div class="ct-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <div class="ct-label">Режим работы</div>
+                            <div class="ct-value">Пн–Пт: 08:00 — 17:00</div>
+                            <div class="ct-value" style="font-size:13px;color:var(--text-muted)">Сб: 09:00 — 13:00</div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="ct-item">
+                        <div class="ct-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="ct-label">Адрес</div>
+                            <div class="ct-value">Кыргызская Республика, Джалал-Абадская область, г. Кочкор-Ата</div>
+                        </div>
+                    </div>
+                    <div class="ct-item" style="border-bottom:none">
+                        <div class="ct-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <div class="ct-label">Режим работы</div>
+                            <div class="ct-value">Пн–Пт: 08:00 — 17:00</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Карта -->
+        <div class="col-lg-7">
+            <div class="about-card h-100">
+                <div class="about-card-head d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-map-marked-alt adm-icon"></i>
+                        <h5 class="mb-0">Расположение на карте</h5>
+                    </div>
+                    {% if contact and contact.map_url %}
+                    <a href="{{ contact.map_url }}" target="_blank" rel="noopener"
+                       class="btn btn-sm text-white" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);font-size:12px;">
+                        <i class="fas fa-external-link-alt me-1"></i>Открыть
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="p-0" style="overflow:hidden;border-radius:0 0 var(--radius-lg) var(--radius-lg)">
+                    <iframe
+                        src="https://maps.google.com/maps?q=41.0372,72.4781&z=15&output=embed&hl=ru"
+                        width="100%" height="380" style="border:0;display:block;"
+                        allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

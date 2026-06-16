@@ -1,0 +1,714 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}{% trans "Кочкор-Атинский региональный колледж — Официальный сайт" %}{% endblock %}
+
+{% block content %}
+
+<!-- §1 HERO -->
+<section id="hero" class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-cross"><i class="fas fa-plus"></i></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-7">
+                <div class="hero-content">
+                    <div class="hero-tag">{% trans "Медицинское образование · Кыргызстан" %}</div>
+                    <h1 class="hero-title">
+                        {% trans "Кочкор-Атинский" %}<br>
+                        <span>{% trans "Региональный" %}</span><br>
+                        {% trans "Колледж" %}
+                    </h1>
+                    <p class="hero-desc">
+                        {% trans "Качественная подготовка медицинских специалистов. Современная учебная база, опытные преподаватели и гарантированное трудоустройство." %}
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#specialties" class="btn-hero btn-hero-fill spa-link">
+                            <i class="fas fa-graduation-cap"></i> {% trans "Наши специальности" %}
+                        </a>
+                        <a href="#admissions" class="btn-hero btn-hero-ghost spa-link">
+                            <i class="fas fa-file-alt"></i> {% trans "Поступление" %}
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-num">{{ specialties.count|default:"4" }}</div>
+                            <div class="hero-stat-lbl">{% trans "Специальности" %}</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num">1000+</div>
+                            <div class="hero-stat-lbl">{% trans "Выпускников" %}</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num">30+</div>
+                            <div class="hero-stat-lbl">{% trans "Преподавателей" %}</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num">{% if college_info %}{{ college_info.founded_year }}{% else %}2010{% endif %}</div>
+                            <div class="hero-stat-lbl">{% trans "Год основания" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- §2 О КОЛЛЕДЖЕ -->
+<section id="about" class="spa-section bg-section">
+    <div class="container">
+
+        <!-- Intro row -->
+        <div class="row align-items-center g-5 mb-5" data-reveal>
+            <div class="col-lg-6">
+                <div class="section-label">{% trans "О нас" %}</div>
+                <h2 class="section-title">{% trans "Медицинское образование нового уровня" %}</h2>
+                <p class="section-lead mb-4">
+                    {% trans "Кочкор-Атинский региональный колледж готовит квалифицированных специалистов для системы здравоохранения Кыргызской Республики." %}
+                </p>
+                <ul class="feature-list">
+                    <li><span class="fi"><i class="fas fa-check"></i></span>{% trans "Государственная лицензия и аккредитация" %}</li>
+                    <li><span class="fi"><i class="fas fa-check"></i></span>{% trans "Современные учебные кабинеты и лаборатории" %}</li>
+                    <li><span class="fi"><i class="fas fa-check"></i></span>{% trans "Практика в ведущих учреждениях здравоохранения" %}</li>
+                    <li><span class="fi"><i class="fas fa-check"></i></span>{% trans "Бюджетная и контрактная форма обучения" %}</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                {% if college_info and college_info.photo %}
+                <div class="about-visual" style="padding:0;overflow:hidden">
+                    <img src="{{ college_info.photo.url }}" alt="{{ college_info.photo.name }}"
+                         style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)">
+                </div>
+                {% else %}
+                <div class="about-visual">
+                    <div class="text-center text-white" style="position:relative;z-index:2">
+                        <i class="fas fa-hospital-alt" style="font-size:60px;opacity:.25"></i>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row g-3 mb-5">
+            <div class="col-6 col-md-3" data-reveal data-delay="1">
+                <div class="about-stat-box">
+                    <div class="about-stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="about-stat-num">4</div>
+                    <div class="about-stat-lbl">{% trans "Специальности" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-reveal data-delay="2">
+                <div class="about-stat-box">
+                    <div class="about-stat-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="about-stat-num">1000+</div>
+                    <div class="about-stat-lbl">{% trans "Выпускников" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-reveal data-delay="3">
+                <div class="about-stat-box">
+                    <div class="about-stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="about-stat-num">30+</div>
+                    <div class="about-stat-lbl">{% trans "Преподавателей" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-reveal data-delay="4">
+                <div class="about-stat-box">
+                    <div class="about-stat-icon"><i class="fas fa-door-open"></i></div>
+                    <div class="about-stat-num">12</div>
+                    <div class="about-stat-lbl">{% trans "Учебных кабинетов" %}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History + Building -->
+        {% if college_info %}
+        <div class="about-card mb-4" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-history adm-icon"></i>
+                <h5>{% trans "История колледжа" %}</h5>
+            </div>
+            <div class="about-card-body">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-8">
+                        <div class="about-text">{{ college_info.history|safe }}</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row g-3">
+                            <div class="col-6 col-lg-12">
+                                <div class="about-stat-box">
+                                    <div class="about-stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <div class="about-stat-num">{{ college_info.founded_year }}</div>
+                                    <div class="about-stat-lbl">{% trans "Год основания" %}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="about-stat-box">
+                                    <div class="about-stat-icon"><i class="fas fa-landmark"></i></div>
+                                    <div class="about-stat-num" style="font-size:15px">{{ college_info.ownership_form }}</div>
+                                    <div class="about-stat-lbl">{% trans "Форма собственности" %}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-lg-6" data-reveal data-delay="1">
+                <div class="about-card h-100">
+                    <div class="about-card-head">
+                        <i class="fas fa-building adm-icon"></i>
+                        <h5>{% trans "Здание и инфраструктура" %}</h5>
+                    </div>
+                    <div class="about-card-body">
+                        <div class="about-text">{{ college_info.building_info|safe }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="2">
+                <div class="about-card h-100">
+                    <div class="about-card-head">
+                        <i class="fas fa-tools adm-icon"></i>
+                        <h5>{% trans "Материально-техническая база" %}</h5>
+                    </div>
+                    <div class="about-card-body">
+                        <div class="about-text">{{ college_info.facilities|safe }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <!-- Fallback history -->
+        <div class="about-card mb-4" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-history adm-icon"></i>
+                <h5>{% trans "История колледжа" %}</h5>
+            </div>
+            <div class="about-card-body">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-8 about-text">
+                        <p>{% trans "Кочкор-Атинский региональный колледж готовит квалифицированных специалистов для системы здравоохранения Кыргызской Республики." %}</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-stat-box">
+                            <div class="about-stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="about-stat-num">2010</div>
+                            <div class="about-stat-lbl">{% trans "Год основания" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Mission -->
+        {% if site_settings and site_settings.mission %}
+        <div class="about-card mb-4" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-bullseye adm-icon"></i>
+                <h5>{% trans "Миссия колледжа" %}</h5>
+            </div>
+            <div class="about-card-body">
+                <div class="about-text mission-text">{{ site_settings.mission|safe }}</div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Documents -->
+        <div class="about-card" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-file-alt adm-icon"></i>
+                <h5>{% trans "Лицензии и документы" %}</h5>
+            </div>
+            <div class="about-card-body">
+                {% if documents %}
+                <div class="row g-3">
+                    {% for doc in documents %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="doc-item">
+                            <div class="doc-item-icon"><i class="fas fa-file-pdf" style="color:#e53e3e"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:14px">{{ doc.title }}</div>
+                                {% if doc.description %}<div style="font-size:12px;color:var(--text-muted)">{{ doc.description }}</div>{% endif %}
+                                {% if doc.file %}
+                                <a href="{{ doc.file.url }}" class="btn btn-sm btn-outline-primary mt-1" target="_blank" style="font-size:12px">
+                                    <i class="fas fa-download me-1"></i>{% trans "Скачать" %}
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="doc-item">
+                            <div class="doc-item-icon"><i class="fas fa-certificate" style="color:#d4a017"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:14px">{% trans "Лицензия на образовательную деятельность" %}</div>
+                                <div style="font-size:12px;color:var(--text-muted)">{% trans "Министерство образования КР" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="doc-item">
+                            <div class="doc-item-icon"><i class="fas fa-award" style="color:#d4a017"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:14px">{% trans "Свидетельство об аккредитации" %}</div>
+                                <div style="font-size:12px;color:var(--text-muted)">{% trans "Агентство по аккредитации" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- §3 СПЕЦИАЛЬНОСТИ -->
+<section id="specialties" class="spa-section">
+    <div class="container">
+        <div class="text-center mb-5" data-reveal>
+            <div class="section-label justify-content-center">{% trans "Образование" %}</div>
+            <h2 class="section-title">{% trans "Направления подготовки" %}</h2>
+            <p class="section-lead mx-auto">{% trans "Получите востребованную профессию в области здравоохранения Кыргызской Республики" %}</p>
+        </div>
+        <div class="row g-4">
+            {% if specialties %}
+            {% for spec in specialties %}
+            <div class="col-lg-6" data-reveal data-delay="{{ forloop.counter }}">
+                <div class="spec-detail-card">
+                    <div class="spec-detail-head">
+                        <div class="spec-detail-icon">
+                            {% if spec.code == '010609' %}<i class="fas fa-user-nurse fa-xl"></i>
+                            {% elif spec.code == '010602' %}<i class="fas fa-baby fa-xl"></i>
+                            {% elif spec.code == '010608' %}<i class="fas fa-pills fa-xl"></i>
+                            {% else %}<i class="fas fa-heartbeat fa-xl"></i>{% endif %}
+                        </div>
+                        <div>
+                            <h4 class="text-white mb-1" style="font-weight:700">{{ spec.name }}</h4>
+                            <span class="badge" style="background:rgba(255,255,255,.2);font-size:11px;font-weight:600">{% trans "Код" %}: {{ spec.code }}</span>
+                        </div>
+                    </div>
+                    <div class="spec-detail-body">
+                        <div class="spec-info-row mb-3">
+                            <div class="spec-info-item">
+                                <div class="si-icon"><i class="fas fa-clock"></i></div>
+                                <div>
+                                    <div class="si-label">{% trans "Срок обучения" %}</div>
+                                    <div class="si-val">{{ spec.duration }}</div>
+                                </div>
+                            </div>
+                            <div class="spec-info-item">
+                                <div class="si-icon"><i class="fas fa-certificate"></i></div>
+                                <div>
+                                    <div class="si-label">{% trans "Квалификация" %}</div>
+                                    <div class="si-val">{{ spec.qualification }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if spec.description %}
+                        <div class="text-muted mb-3" style="font-size:14px">{{ spec.description|safe }}</div>
+                        {% endif %}
+                        <a href="#admissions" class="btn btn-primary spa-link">
+                            <i class="fas fa-file-alt me-2"></i>{% trans "Поступить" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <!-- Fallback specialties -->
+            {% for spec in "1234" %}
+            <div class="col-lg-6" data-reveal data-delay="{{ forloop.counter }}">
+                {% if forloop.counter == 1 %}
+                <div class="spec-detail-card"><div class="spec-detail-head"><div class="spec-detail-icon"><i class="fas fa-user-nurse fa-xl"></i></div><div><h4 class="text-white mb-1" style="font-weight:700">Сестринское дело</h4><span class="badge" style="background:rgba(255,255,255,.2);font-size:11px">Код: 010609</span></div></div><div class="spec-detail-body"><div class="spec-info-row mb-3"><div class="spec-info-item"><div class="si-icon"><i class="fas fa-clock"></i></div><div><div class="si-label">Срок</div><div class="si-val">2 г. 10 мес.</div></div></div><div class="spec-info-item"><div class="si-icon"><i class="fas fa-certificate"></i></div><div><div class="si-label">Квалификация</div><div class="si-val">Медицинская сестра</div></div></div></div><a href="#admissions" class="btn btn-primary spa-link"><i class="fas fa-file-alt me-2"></i>Поступить</a></div></div>
+                {% elif forloop.counter == 2 %}
+                <div class="spec-detail-card"><div class="spec-detail-head"><div class="spec-detail-icon"><i class="fas fa-baby fa-xl"></i></div><div><h4 class="text-white mb-1" style="font-weight:700">Акушерское дело</h4><span class="badge" style="background:rgba(255,255,255,.2);font-size:11px">Код: 010602</span></div></div><div class="spec-detail-body"><div class="spec-info-row mb-3"><div class="spec-info-item"><div class="si-icon"><i class="fas fa-clock"></i></div><div><div class="si-label">Срок</div><div class="si-val">2 г. 10 мес.</div></div></div><div class="spec-info-item"><div class="si-icon"><i class="fas fa-certificate"></i></div><div><div class="si-label">Квалификация</div><div class="si-val">Акушер</div></div></div></div><a href="#admissions" class="btn btn-primary spa-link"><i class="fas fa-file-alt me-2"></i>Поступить</a></div></div>
+                {% elif forloop.counter == 3 %}
+                <div class="spec-detail-card"><div class="spec-detail-head"><div class="spec-detail-icon"><i class="fas fa-pills fa-xl"></i></div><div><h4 class="text-white mb-1" style="font-weight:700">Фармация</h4><span class="badge" style="background:rgba(255,255,255,.2);font-size:11px">Код: 010608</span></div></div><div class="spec-detail-body"><div class="spec-info-row mb-3"><div class="spec-info-item"><div class="si-icon"><i class="fas fa-clock"></i></div><div><div class="si-label">Срок</div><div class="si-val">2 г. 10 мес.</div></div></div><div class="spec-info-item"><div class="si-icon"><i class="fas fa-certificate"></i></div><div><div class="si-label">Квалификация</div><div class="si-val">Фармацевт</div></div></div></div><a href="#admissions" class="btn btn-primary spa-link"><i class="fas fa-file-alt me-2"></i>Поступить</a></div></div>
+                {% else %}
+                <div class="spec-detail-card"><div class="spec-detail-head"><div class="spec-detail-icon"><i class="fas fa-heartbeat fa-xl"></i></div><div><h4 class="text-white mb-1" style="font-weight:700">Физическая терапия</h4><span class="badge" style="background:rgba(255,255,255,.2);font-size:11px">Код: 060113</span></div></div><div class="spec-detail-body"><div class="spec-info-row mb-3"><div class="spec-info-item"><div class="si-icon"><i class="fas fa-clock"></i></div><div><div class="si-label">Срок</div><div class="si-val">1–2 г. 10 мес.</div></div></div><div class="spec-info-item"><div class="si-icon"><i class="fas fa-certificate"></i></div><div><div class="si-label">Квалификация</div><div class="si-val">Помощник физ. терапевта</div></div></div></div><a href="#admissions" class="btn btn-primary spa-link"><i class="fas fa-file-alt me-2"></i>Поступить</a></div></div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- §4 НОВОСТИ -->
+{% if news_items %}
+<section id="news" class="spa-section bg-section">
+    <div class="container">
+        <div class="text-center mb-5" data-reveal>
+            <div class="section-label justify-content-center">{% trans "Актуально" %}</div>
+            <h2 class="section-title">{% trans "Последние новости" %}</h2>
+        </div>
+        <div class="row g-4">
+            {% for item in news_items %}
+            <div class="col-md-6 col-lg-4" data-reveal data-delay="{{ forloop.counter }}">
+                <div class="news-card">
+                    {% if item.image %}
+                    <div class="news-thumb">
+                        <span class="news-cat-badge">{% trans "Новости" %}</span>
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}" loading="lazy">
+                    </div>
+                    {% else %}
+                    <div class="news-thumb-placeholder" style="height:195px;display:flex;align-items:center;justify-content:center;">
+                        <i class="fas fa-newspaper fa-3x" style="color:rgba(255,255,255,.25)"></i>
+                    </div>
+                    {% endif %}
+                    <div class="news-body">
+                        <div class="news-date"><i class="fas fa-calendar-alt"></i>{{ item.created_at|date:"d F Y" }}</div>
+                        <div class="news-title">{{ item.title }}</div>
+                        <div class="news-excerpt">{{ item.content|striptags|truncatewords:20 }}</div>
+                        <a href="{% url 'news_detail' item.pk %}" class="news-more">
+                            {% trans "Читать далее" %} <i class="fas fa-arrow-right fa-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- §5 ГАЛЕРЕЯ -->
+<section id="gallery" class="spa-section">
+    <div class="container">
+        <div class="text-center mb-4" data-reveal>
+            <div class="section-label justify-content-center">{% trans "Фотоальбом" %}</div>
+            <h2 class="section-title">{% trans "Галерея колледжа" %}</h2>
+        </div>
+
+        {% if categories %}
+        <div class="gallery-filter mb-4 d-flex flex-wrap gap-2 justify-content-center" data-reveal>
+            <button class="gallery-filter-btn btn btn-primary" data-cat="">
+                <i class="fas fa-th me-1"></i>{% trans "Все" %}
+            </button>
+            {% for cat in categories %}
+            <button class="gallery-filter-btn btn btn-outline-primary" data-cat="{{ cat.id }}">
+                {{ cat.name }}
+            </button>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if gallery_photos %}
+        <div class="row g-3" id="gallery-grid">
+            {% for photo in gallery_photos %}
+            <div class="col-6 col-md-4 col-lg-3 g-item-wrap" data-category="{{ photo.category.id|default:'none' }}" data-reveal>
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#gModal{{ photo.id }}">
+                    <img src="{{ photo.image.url }}" alt="{{ photo.title }}" class="img-fluid" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus fa-lg"></i>
+                        <p class="gallery-item-title">{{ photo.title }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="gModal{{ photo.id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark border-0">
+                        <div class="modal-header border-0 pb-0">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center pt-0">
+                            <img src="{{ photo.image.url }}" alt="{{ photo.title }}" class="img-fluid rounded">
+                            <p class="text-white mt-3 mb-0">{{ photo.title }}</p>
+                            {% if photo.category %}<small class="text-white-50">{{ photo.category.name }}</small>{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5" data-reveal>
+            <i class="fas fa-images fa-4x text-muted mb-3"></i>
+            <h4 class="text-muted">{% trans "Фотографии пока не добавлены" %}</h4>
+            <p class="text-muted">{% trans "Фотографии появятся здесь после добавления через панель администратора." %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- §6 АБИТУРИЕНТАМ -->
+<section id="admissions" class="spa-section bg-section">
+    <div class="container">
+        <div class="text-center mb-5" data-reveal>
+            <div class="section-label justify-content-center">{% trans "Поступление" %}</div>
+            <h2 class="section-title">{% trans "Абитуриентам" %}</h2>
+            <p class="section-lead mx-auto">{% trans "Всё, что нужно знать для поступления в колледж" %}</p>
+        </div>
+
+        {% if admission %}
+        <div class="row g-4">
+            <div class="col-lg-6" data-reveal data-delay="1">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-clipboard-list"></i><h5>{% trans "Условия приёма" %}</h5></div>
+                    <div class="adm-card-body">{{ admission.conditions|safe }}</div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="2">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-folder-open"></i><h5>{% trans "Необходимые документы" %}</h5></div>
+                    <div class="adm-card-body">{{ admission.required_documents|safe }}</div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="3">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-money-bill-wave"></i><h5>{% trans "Стоимость обучения" %}</h5></div>
+                    <div class="adm-card-body">{{ admission.tuition_cost|safe }}</div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="4">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-calendar-alt"></i><h5>{% trans "Сроки подачи документов" %}</h5></div>
+                    <div class="adm-card-body">{{ admission.deadlines|safe }}</div>
+                </div>
+            </div>
+            <div class="col-12" data-reveal>
+                <div class="adm-card">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-phone-alt"></i><h5>{% trans "Контакты приёмной комиссии" %}</h5></div>
+                    <div class="adm-card-body">{{ admission.committee_contacts|safe }}</div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <!-- Fallback admissions -->
+        <div class="row g-4">
+            <div class="col-lg-6" data-reveal data-delay="1">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-clipboard-list"></i><h5>{% trans "Условия приёма" %}</h5></div>
+                    <div class="adm-card-body">
+                        <ul>
+                            <li>{% trans "Аттестат об основном или среднем образовании (9 или 11 кл.)" %}</li>
+                            <li>{% trans "Возраст от 15 лет" %}</li>
+                            <li>{% trans "Медицинская справка (форма 086/у)" %}</li>
+                            <li>{% trans "Гражданство Кыргызской Республики" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="2">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-folder-open"></i><h5>{% trans "Необходимые документы" %}</h5></div>
+                    <div class="adm-card-body">
+                        <ul>
+                            <li>{% trans "Заявление на имя директора" %}</li>
+                            <li>{% trans "Аттестат об образовании (оригинал + копия)" %}</li>
+                            <li>{% trans "Паспорт / ID-карта (копия)" %}</li>
+                            <li>{% trans "Медицинская справка (форма 086/у)" %}</li>
+                            <li>{% trans "6 фотографий 3×4 см" %}</li>
+                            <li>{% trans "Флюорография" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="3">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-money-bill-wave"></i><h5>{% trans "Стоимость обучения" %}</h5></div>
+                    <div class="adm-card-body">
+                        <div class="adm-cost-row">
+                            <div class="adm-cost-item">
+                                <div class="adm-cost-icon"><i class="fas fa-landmark"></i></div>
+                                <div><div class="adm-cost-label">{% trans "Бюджетная форма" %}</div><div class="adm-cost-val">{% trans "Бесплатно" %}</div></div>
+                            </div>
+                            <div class="adm-cost-item">
+                                <div class="adm-cost-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                                <div><div class="adm-cost-label">{% trans "Контрактная форма" %}</div><div class="adm-cost-val">{% trans "Уточнить в приёмной комиссии" %}</div></div>
+                            </div>
+                        </div>
+                        <div class="adm-note mt-3"><i class="fas fa-info-circle me-2"></i>{% trans "Возможна оплата в рассрочку" %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-reveal data-delay="4">
+                <div class="adm-card h-100">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-calendar-alt"></i><h5>{% trans "Сроки подачи документов" %}</h5></div>
+                    <div class="adm-card-body">
+                        <div class="timeline-row">
+                            <div class="tl-item"><div class="tl-dot" style="background:var(--primary)">1</div><div class="tl-text"><strong>{% trans "Июнь — Август" %}</strong><p>{% trans "Приём документов в приёмной комиссии" %}</p></div></div>
+                            <div class="tl-item"><div class="tl-dot" style="background:var(--accent)">2</div><div class="tl-text"><strong>{% trans "Август — Сентябрь" %}</strong><p>{% trans "Зачисление, оформление документов" %}</p></div></div>
+                            <div class="tl-item"><div class="tl-dot" style="background:var(--gold)">3</div><div class="tl-text"><strong>{% trans "1 сентября" %}</strong><p>{% trans "Начало учебного года" %}</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if contact %}
+            <div class="col-12" data-reveal>
+                <div class="adm-card">
+                    <div class="adm-card-head"><i class="adm-icon fas fa-phone-alt"></i><h5>{% trans "Контакты приёмной комиссии" %}</h5></div>
+                    <div class="adm-card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4"><div class="adm-contact-item"><div class="adm-contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="adm-cost-label">{% trans "Адрес" %}</div><div class="adm-cost-val">{{ contact.address }}</div></div></div></div>
+                            <div class="col-md-4"><div class="adm-contact-item"><div class="adm-contact-icon"><i class="fas fa-phone"></i></div><div><div class="adm-cost-label">{% trans "Телефон" %}</div><div class="adm-cost-val"><a href="tel:{{ contact.phone }}" style="color:var(--primary)">{{ contact.phone }}</a></div></div></div></div>
+                            <div class="col-md-4"><div class="adm-contact-item"><div class="adm-contact-icon"><i class="fas fa-envelope"></i></div><div><div class="adm-cost-label">Email</div><div class="adm-cost-val"><a href="mailto:{{ contact.email }}" style="color:var(--primary)">{{ contact.email }}</a></div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- §7 МИНИСТЕРСТВО -->
+<section id="ministry" class="spa-section">
+    <div class="container">
+        {% if ministry %}
+        <div class="about-card" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-landmark adm-icon"></i>
+                <h5>{{ ministry.title }}</h5>
+            </div>
+            <div class="about-card-body">
+                <div class="row g-4 align-items-start">
+                    {% if ministry.logo %}
+                    <div class="col-lg-3 text-center">
+                        <img src="{{ ministry.logo.url }}" alt="{{ ministry.title }}"
+                             class="img-fluid rounded shadow-sm" style="max-height:180px;object-fit:contain;">
+                    </div>
+                    {% endif %}
+                    <div class="{% if ministry.logo %}col-lg-9{% else %}col-12{% endif %}">
+                        {% if ministry.description %}<p class="lead mb-3">{{ ministry.description }}</p>{% endif %}
+                        {% if ministry.content %}<div class="about-text">{{ ministry.content|safe }}</div>{% endif %}
+                        {% if ministry.website_url %}
+                        <div class="mt-4">
+                            <a href="{{ ministry.website_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt me-2"></i>{% trans "Официальный сайт" %}
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="about-card" data-reveal>
+            <div class="about-card-head">
+                <i class="fas fa-landmark adm-icon"></i>
+                <h5>{% trans "Министерство науки, высшего образования и инноваций Кыргызской Республики" %}</h5>
+            </div>
+            <div class="about-card-body about-text">
+                <p>{% trans "Информация о министерстве будет добавлена через панель администратора." %}</p>
+                <a href="/admin/main/ministrypage/add/" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-plus me-1"></i>{% trans "Добавить в админке" %}
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- §8 КОНТАКТЫ -->
+<section id="contacts" class="spa-section bg-section">
+    <div class="container">
+        <div class="text-center mb-5" data-reveal>
+            <div class="section-label justify-content-center">{% trans "Связь" %}</div>
+            <h2 class="section-title">{% trans "Контакты" %}</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-5" data-reveal data-delay="1">
+                <div class="about-card h-100">
+                    <div class="about-card-head">
+                        <i class="fas fa-address-card adm-icon"></i>
+                        <h5>{% trans "Контактная информация" %}</h5>
+                    </div>
+                    <div class="about-card-body p-0">
+                        {% if contact %}
+                        <div class="ct-item">
+                            <div class="ct-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><div class="ct-label">{% trans "Адрес" %}</div><div class="ct-value">{{ contact.address }}</div></div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon"><i class="fas fa-phone"></i></div>
+                            <div><div class="ct-label">{% trans "Телефон" %}</div><div class="ct-value"><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a></div></div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon"><i class="fas fa-envelope"></i></div>
+                            <div><div class="ct-label">Email</div><div class="ct-value"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div></div>
+                        </div>
+                        <div class="ct-item" style="border-bottom:none">
+                            <div class="ct-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <div class="ct-label">{% trans "Режим работы" %}</div>
+                                <div class="ct-value">{% trans "Пн–Пт: 08:00 — 17:00" %}</div>
+                                <div class="ct-value" style="font-size:13px;color:var(--text-muted)">{% trans "Сб: 09:00 — 13:00" %}</div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="ct-item">
+                            <div class="ct-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><div class="ct-label">{% trans "Адрес" %}</div><div class="ct-value">{% trans "Кыргызская Республика, Джалал-Абадская область, г. Кочкор-Ата" %}</div></div>
+                        </div>
+                        <div class="ct-item"><div class="ct-icon"><i class="fas fa-phone"></i></div><div><div class="ct-label">{% trans "Телефон" %}</div><div class="ct-value">+996 (722) 12-34-56</div></div></div>
+                        <div class="ct-item"><div class="ct-icon"><i class="fas fa-envelope"></i></div><div><div class="ct-label">Email</div><div class="ct-value">info@kochkoratakolledj.kg</div></div></div>
+                        <div class="ct-item" style="border-bottom:none">
+                            <div class="ct-icon"><i class="fas fa-clock"></i></div>
+                            <div><div class="ct-label">{% trans "Режим работы" %}</div><div class="ct-value">{% trans "Пн–Пт: 08:00 — 17:00" %}</div></div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" data-reveal data-delay="2">
+                <div class="about-card h-100">
+                    <div class="about-card-head d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-map-marked-alt adm-icon"></i>
+                            <h5 class="mb-0">{% trans "Расположение на карте" %}</h5>
+                        </div>
+                        {% if contact and contact.map_url %}
+                        <a href="{{ contact.map_url }}" target="_blank" rel="noopener"
+                           class="btn btn-sm text-white" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);font-size:12px;">
+                            <i class="fas fa-external-link-alt me-1"></i>{% trans "Открыть" %}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div style="overflow:hidden;border-radius:0 0 var(--radius-lg) var(--radius-lg)">
+                        <iframe src="https://maps.google.com/maps?q=41.0372,72.4781&z=15&output=embed&hl=ru"
+                                width="100%" height="360" style="border:0;display:block;"
+                                allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA band -->
+<section class="cta-band" data-reveal>
+    <div class="container" style="position:relative;z-index:2">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <div class="section-label" style="color:#4dd4b0">{% trans "Поступление" %}</div>
+                <h2 class="text-white fw-800 mb-2" style="font-size:clamp(1.4rem,3vw,2rem);font-weight:800">
+                    {% trans "Начни своё медицинское образование сегодня" %}
+                </h2>
+                <p style="color:rgba(255,255,255,.70);margin:0;font-size:15px">
+                    {% trans "Приёмная комиссия работает. Подайте документы и получите консультацию." %}
+                </p>
+            </div>
+            <div class="col-lg-4 d-flex gap-3 flex-wrap justify-content-lg-end">
+                <a href="#admissions" class="btn-hero btn-hero-fill spa-link">
+                    <i class="fas fa-file-alt"></i> {% trans "Условия поступления" %}
+                </a>
+                <a href="#contacts" class="btn-hero btn-hero-ghost spa-link">
+                    <i class="fas fa-phone"></i> {% trans "Контакты" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

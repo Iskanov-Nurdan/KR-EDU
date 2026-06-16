@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}О колледже — Кочкор-Атинский региональный колледж{% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5">
+
+    {% if college_info %}
+
+    <!-- История -->
+    <div class="about-card mb-4">
+        <div class="about-card-head">
+            <i class="fas fa-history adm-icon"></i>
+            <h5>История колледжа</h5>
+        </div>
+        <div class="about-card-body">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-8">
+                    <div class="about-text">{{ college_info.history|linebreaks }}</div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-3">
+                        <div class="col-6 col-lg-12">
+                            <div class="about-stat-box">
+                                <div class="about-stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="about-stat-num">{{ college_info.founded_year }}</div>
+                                <div class="about-stat-lbl">Год основания</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-12">
+                            <div class="about-stat-box">
+                                <div class="about-stat-icon"><i class="fas fa-landmark"></i></div>
+                                <div class="about-stat-num" style="font-size:16px">{{ college_info.ownership_form }}</div>
+                                <div class="about-stat-lbl">Форма собственности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Здание и база -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="about-card h-100">
+                <div class="about-card-head">
+                    <i class="fas fa-building adm-icon"></i>
+                    <h5>Здание и инфраструктура</h5>
+                </div>
+                <div class="about-card-body">
+                    <div class="about-text">{{ college_info.building_info|linebreaks }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="about-card h-100">
+                <div class="about-card-head">
+                    <i class="fas fa-tools adm-icon"></i>
+                    <h5>Материально-техническая база</h5>
+                </div>
+                <div class="about-card-body">
+                    <div class="about-text">{{ college_info.facilities|linebreaks }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+    <!-- Fallback -->
+    <div class="about-card mb-4">
+        <div class="about-card-head">
+            <i class="fas fa-history adm-icon"></i>
+            <h5>История колледжа</h5>
+        </div>
+        <div class="about-card-body">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-8">
+                    <div class="about-text">
+                        <p>Кочкор-Атинский региональный колледж основан в 2010 году по инициативе Министерства здравоохранения Кыргызской Республики.</p>
+                        <p>За годы работы колледж подготовил более 1000 выпускников, которые успешно трудятся в учреждениях здравоохранения Кыргызстана.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-3">
+                        <div class="col-6 col-lg-12">
+                            <div class="about-stat-box">
+                                <div class="about-stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="about-stat-num">2010</div>
+                                <div class="about-stat-lbl">Год основания</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-12">
+                            <div class="about-stat-box">
+                                <div class="about-stat-icon"><i class="fas fa-landmark"></i></div>
+                                <div class="about-stat-num" style="font-size:16px">Государственная</div>
+                                <div class="about-stat-lbl">Форма собственности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="about-card h-100">
+                <div class="about-card-head">
+                    <i class="fas fa-building adm-icon"></i>
+                    <h5>Здание и инфраструктура</h5>
+                </div>
+                <div class="about-card-body about-text">
+                    <p>Колледж располагается в двухэтажном здании общей площадью 2400 кв. м. На территории находятся учебные корпуса, библиотека, актовый зал и спортивная площадка.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="about-card h-100">
+                <div class="about-card-head">
+                    <i class="fas fa-tools adm-icon"></i>
+                    <h5>Материально-техническая база</h5>
+                </div>
+                <div class="about-card-body about-text">
+                    <p>12 учебных кабинетов, кабинет доклинической практики, лаборатория фармакологии, компьютерный класс, библиотека с читальным залом.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Показатели -->
+    <div class="about-card mb-4">
+        <div class="about-card-head">
+            <i class="fas fa-chart-bar adm-icon"></i>
+            <h5>Колледж в цифрах</h5>
+        </div>
+        <div class="about-card-body">
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="about-stat-box">
+                        <div class="about-stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="about-stat-num">4</div>
+                        <div class="about-stat-lbl">Специальности</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="about-stat-box">
+                        <div class="about-stat-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="about-stat-num">1000+</div>
+                        <div class="about-stat-lbl">Выпускников</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="about-stat-box">
+                        <div class="about-stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="about-stat-num">30+</div>
+                        <div class="about-stat-lbl">Преподавателей</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="about-stat-box">
+                        <div class="about-stat-icon"><i class="fas fa-door-open"></i></div>
+                        <div class="about-stat-num">12</div>
+                        <div class="about-stat-lbl">Учебных кабинетов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Документы -->
+    <div class="about-card">
+        <div class="about-card-head">
+            <i class="fas fa-file-alt adm-icon"></i>
+            <h5>Лицензии и документы</h5>
+        </div>
+        <div class="about-card-body">
+            {% if documents %}
+            <div class="row g-3">
+                {% for doc in documents %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="doc-item">
+                        <div class="doc-item-icon">
+                            <i class="fas fa-file-pdf" style="color:#e53e3e"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:600;font-size:14px">{{ doc.title }}</div>
+                            {% if doc.description %}<div style="font-size:12px;color:var(--text-muted)">{{ doc.description }}</div>{% endif %}
+                            {% if doc.file %}
+                            <a href="{{ doc.file.url }}" class="btn btn-sm btn-outline-primary mt-1" target="_blank" style="font-size:12px">
+                                <i class="fas fa-download me-1"></i>Скачать
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="doc-item">
+                        <div class="doc-item-icon"><i class="fas fa-certificate" style="color:#d4a017"></i></div>
+                        <div>
+                            <div style="font-weight:600;font-size:14px">Лицензия на образовательную деятельность</div>
+                            <div style="font-size:12px;color:var(--text-muted)">Министерство образования КР</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="doc-item">
+                        <div class="doc-item-icon"><i class="fas fa-award" style="color:#d4a017"></i></div>
+                        <div>
+                            <div style="font-weight:600;font-size:14px">Свидетельство об аккредитации</div>
+                            <div style="font-size:12px;color:var(--text-muted)">Агентство по аккредитации</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+# systemd unit for the Django app behind nginx
+# Place at /etc/systemd/system/gunicorn-kr-edu.service
+# then: systemctl daemon-reload && systemctl enable --now gunicorn-kr-edu
+
+[Unit]
+Description=gunicorn daemon for kr-edu.kg
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/kr-edu.kg
+EnvironmentFile=/var/www/kr-edu.kg/.env
+ExecStart=/var/www/kr-edu.kg/venv/bin/gunicorn \
+    --workers 3 \
+    --bind unix:/run/gunicorn-kr-edu.sock \
+    --access-logfile /var/log/gunicorn/kr-edu-access.log \
+    --error-logfile /var/log/gunicorn/kr-edu-error.log \
+    college_site.wsgi:application
+RuntimeDirectory=gunicorn
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -3,6 +3,7 @@ from django.views.generic import DetailView
 from .models import (
     Specialty, News, Gallery, GalleryCategory,
     Contact, CollegeInfo, Document, Admission, MinistryPage,
+    Testimonial, FAQ,
 )
 
 
@@ -18,6 +19,8 @@ def index(request):
         'contact':        Contact.objects.first(),
         'admission':      Admission.objects.first(),
         'ministry':       MinistryPage.objects.first(),
+        'testimonials':   Testimonial.objects.all(),
+        'faqs':           FAQ.objects.all(),
     })
 
 

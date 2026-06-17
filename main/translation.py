@@ -2,6 +2,7 @@ from modeltranslation.translator import register, TranslationOptions
 from .models import (
     SiteSettings, CollegeInfo, Specialty, News,
     Admission, Contact, Document, GalleryCategory, Gallery, MinistryPage,
+    Testimonial, FAQ,
 )
 
 
@@ -53,3 +54,13 @@ class DocumentTranslation(TranslationOptions):
 @register(Admission)
 class AdmissionTranslation(TranslationOptions):
     fields = ('conditions', 'required_documents', 'tuition_cost', 'deadlines', 'committee_contacts')
+
+
+@register(Testimonial)
+class TestimonialTranslation(TranslationOptions):
+    fields = ('name', 'role', 'text')
+
+
+@register(FAQ)
+class FAQTranslation(TranslationOptions):
+    fields = ('question', 'answer')

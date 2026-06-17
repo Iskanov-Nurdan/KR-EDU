@@ -3,25 +3,17 @@
 {% block title %}{% trans "Кочкор-Атинский региональный колледж — Официальный сайт" %}{% endblock %}
 
 {% block content %}
-
 <!-- ═══════════════════════════════════════════
      §1  HERO — fullscreen image slideshow
 ═══════════════════════════════════════════ -->
-{% with gallery_photos|slice:":7" as hero_photos %}
-<section id="hero" class="hero{% if hero_photos %} has-slides{% endif %}">
-
-    {# ── Slideshow backgrounds ── #}
-    {% if hero_photos %}
+<section id="hero" class="hero{% if site_settings.hero_background %} has-slides{% endif %}">
+    {# ── Single background image from Site Settings ── #}
+    {% if site_settings.hero_background %}
     <div class="hero-slides" id="heroSlides">
-        {% for photo in hero_photos %}
-        <div class="hero-slide{% if forloop.first %} active{% endif %}"
-             style="background-image:url('{{ photo.image.url }}')"
-             data-caption="{{ photo.title }}"></div>
-        {% endfor %}
+        <div class="hero-slide active" style="background-image:url('{{ site_settings.hero_background.url }}')"></div>
     </div>
     <div class="hero-overlay"></div>
     {% endif %}
-
     {# ── Decorative orbs (visible when no images) ── #}
     <div class="hero-pattern"></div>
     <div class="hero-orb hero-orb-1"></div>
@@ -58,11 +50,11 @@
                             <div class="hero-stat-lbl">{% trans "Специальности" %}</div>
                         </div>
                         <div>
-                            <div class="hero-stat-num" data-counter="1000">1000+</div>
+                            <div class="hero-stat-num" data-counter="1000">{{ site_settings.graduates_count|default:"1000+" }}</div>
                             <div class="hero-stat-lbl">{% trans "Выпускников" %}</div>
                         </div>
                         <div>
-                            <div class="hero-stat-num" data-counter="30">30+</div>
+                            <div class="hero-stat-num" data-counter="30">{{ site_settings.teachers_count|default:"30+" }}</div>
                             <div class="hero-stat-lbl">{% trans "Преподавателей" %}</div>
                         </div>
                         <div>
@@ -92,11 +84,11 @@
                             <div class="hero-glass-lbl">{% trans "Специальности" %}</div>
                         </div>
                         <div class="hero-glass-stat">
-                            <div class="hero-glass-num">1000+</div>
+                            <div class="hero-glass-num">{{ site_settings.graduates_count|default:"1000+" }}</div>
                             <div class="hero-glass-lbl">{% trans "Выпускников" %}</div>
                         </div>
                         <div class="hero-glass-stat">
-                            <div class="hero-glass-num">30+</div>
+                            <div class="hero-glass-num">{{ site_settings.teachers_count|default:"30+" }}</div>
                             <div class="hero-glass-lbl">{% trans "Преподавателей" %}</div>
                         </div>
                     </div>
@@ -122,88 +114,14 @@
         </div>
     </div>
 
-    {# ── Slide dots & caption (only when images exist) ── #}
-    {% if hero_photos %}
-    <div class="hero-dots" id="heroDots">
-        {% for photo in hero_photos %}
-        <button class="hero-dot{% if forloop.first %} active{% endif %}" data-idx="{{ forloop.counter0 }}" aria-label="Слайд {{ forloop.counter }}"></button>
-        {% endfor %}
-    </div>
-    <div class="hero-caption" id="heroCaption">
-        <i class="fas fa-camera"></i>
-        <span id="heroCaptionText">{{ hero_photos.0.title }}</span>
-    </div>
-    <div class="hero-progress"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
-    {% endif %}
-
     {# ── Scroll indicator ── #}
     <div class="hero-scroll d-none d-md-flex" style="z-index:6">
         <div class="hero-scroll-line"><div class="hero-scroll-dot"></div></div>
     </div>
 
 </section>
-{% endwith %}
 
 
-<!-- ═══════════════════════════════════════════
-     §1.5  CAMPUS LIFE STRIP
-═══════════════════════════════════════════ -->
-{% with gallery_photos|slice:":5" as campus_photos %}
-<section class="campus-strip">
-    <div class="campus-mosaic">
-
-        {# Main featured cell #}
-        {% if campus_photos %}
-        {% with campus_photos|slice:":1" as main_photo %}
-        {% for photo in main_photo %}
-        <div class="campus-main">
-            <img src="{{ photo.image.url }}" alt="{{ photo.title }}" loading="lazy">
-            <div class="campus-main-overlay">
-                <div class="campus-eyebrow"><i class="fas fa-images"></i>{% trans "Жизнь колледжа" %}</div>
-                <h3 class="campus-main-title">{% trans "Современная учебная среда для будущих специалистов" %}</h3>
-                <p class="campus-main-sub">{% trans "Лаборатории, аудитории, практика, события" %}</p>
-                <a href="#gallery" class="campus-main-cta spa-link">
-                    <i class="fas fa-images"></i>{% trans "Смотреть галерею" %}
-                </a>
-            </div>
-        </div>
-        {% endfor %}
-        {% endwith %}
-
-        {# Four small cells — show up to 4, pad with empty if fewer #}
-        {% with campus_photos|slice:"1:5" as small_photos %}
-        {% for photo in small_photos %}
-        <div class="campus-cell">
-            <img src="{{ photo.image.url }}" alt="{{ photo.title }}" loading="lazy">
-            <div class="campus-cell-overlay">
-                <span class="campus-cell-label">{{ photo.title }}</span>
-            </div>
-        </div>
-        {% empty %}
-        <div class="campus-cell-empty"><i class="fas fa-chalkboard-teacher"></i><span>{% trans "Аудитории" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-flask"></i><span>{% trans "Лаборатории" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-book-open"></i><span>{% trans "Библиотека" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-user-graduate"></i><span>{% trans "Студенты" %}</span></div>
-        {% endfor %}
-        {% endwith %}
-
-        {% else %}
-        {# No photos at all — styled fallback #}
-        <div class="campus-fallback">
-            <div style="position:relative;z-index:1">
-                <div class="campus-eyebrow"><i class="fas fa-images"></i>{% trans "Жизнь колледжа" %}</div>
-                <h3 class="campus-main-title" style="max-width:340px">{% trans "Фотографии кампуса появятся здесь после добавления через admin-панель" %}</h3>
-            </div>
-        </div>
-        <div class="campus-cell-empty"><i class="fas fa-chalkboard-teacher"></i><span>{% trans "Аудитории" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-flask"></i><span>{% trans "Лаборатории" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-book-open"></i><span>{% trans "Библиотека" %}</span></div>
-        <div class="campus-cell-empty"><i class="fas fa-user-graduate"></i><span>{% trans "Студенты" %}</span></div>
-        {% endif %}
-
-    </div>
-</section>
-{% endwith %}
 
 
 <!-- ═══════════════════════════════════════════
@@ -560,59 +478,22 @@
             <p class="section-lead mx-auto">{% trans "Наши выпускники работают в ведущих учреждениях здравоохранения по всей Кыргызской Республике" %}</p>
         </div>
         <div class="testimonials-grid">
-
-            <div class="testimonial-card" data-reveal data-delay="1">
+            {% for t in testimonials %}
+            <div class="testimonial-card" data-reveal data-delay="{{ forloop.counter }}">
                 <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">{% trans "Обучение в колледже дало мне прочную базу знаний и практических навыков. Уже через год после выпуска я работаю в городской больнице и горжусь своей профессией." %}</p>
+                <p class="testimonial-text">{{ t.text }}</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar"><i class="fas fa-user-nurse"></i></div>
+                    <div class="testimonial-avatar"><i class="fas {{ t.icon }}"></i></div>
                     <div>
-                        <div class="testimonial-name">{% trans "Айгуль Касымова" %}</div>
-                        <div class="testimonial-role">{% trans "Медицинская сестра · Ош" %}</div>
+                        <div class="testimonial-name">{{ t.name }}</div>
+                        <div class="testimonial-role">{{ t.role }}</div>
                     </div>
-                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-stars">{% for n in "12345" %}{% if forloop.counter <= t.rating %}★{% endif %}{% endfor %}</div>
                 </div>
             </div>
-
-            <div class="testimonial-card" data-reveal data-delay="2">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">{% trans "Преподаватели колледжа — настоящие профессионалы. Практические занятия на базе реальных больниц помогли мне быстро адаптироваться на рабочем месте." %}</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar"><i class="fas fa-baby"></i></div>
-                    <div>
-                        <div class="testimonial-name">{% trans "Жылдыз Мамытова" %}</div>
-                        <div class="testimonial-role">{% trans "Акушер · Бишкек" %}</div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                </div>
-            </div>
-
-            <div class="testimonial-card" data-reveal data-delay="3">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">{% trans "Благодаря качественному образованию и поддержке преподавателей я открыл собственную аптеку и развиваю бизнес в Кочкор-Ате. Колледж дал мне всё необходимое." %}</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar"><i class="fas fa-pills"></i></div>
-                    <div>
-                        <div class="testimonial-name">{% trans "Бакыт Сейтаков" %}</div>
-                        <div class="testimonial-role">{% trans "Фармацевт · Кочкор-Ата" %}</div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                </div>
-            </div>
-
-            <div class="testimonial-card" data-reveal data-delay="4">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">{% trans "Я выбрала этот колледж за доступность и высокое качество обучения. Сейчас я специалист по физической терапии и помогаю людям восстанавливаться после травм." %}</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar"><i class="fas fa-heartbeat"></i></div>
-                    <div>
-                        <div class="testimonial-name">{% trans "Нурзат Алиева" %}</div>
-                        <div class="testimonial-role">{% trans "Физ. терапевт · Джалал-Абад" %}</div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                </div>
-            </div>
-
+            {% empty %}
+            <p class="text-center text-muted">{% trans "Отзывы появятся здесь после добавления через панель администратора." %}</p>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -870,77 +751,21 @@
                 </div>
 
                 <div class="faq-list" data-reveal>
-
+                    {% for f in faqs %}
                     <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">
-                            <span>{% trans "Какие документы нужны для поступления?" %}</span>
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq{{ forloop.counter }}" aria-expanded="false">
+                            <span>{{ f.question }}</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </button>
-                        <div class="collapse" id="faq1">
+                        <div class="collapse" id="faq{{ forloop.counter }}">
                             <div class="faq-answer">
-                                {% trans "Для поступления необходимы: заявление на имя директора, аттестат об образовании (оригинал и копия), паспорт или ID-карта (копия), медицинская справка формы 086/у, 6 фотографий 3×4 см и флюорография." %}
+                                {{ f.answer|safe }}
                             </div>
                         </div>
                     </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
-                            <span>{% trans "Есть ли бюджетные места?" %}</span>
-                            <i class="fas fa-plus faq-icon"></i>
-                        </button>
-                        <div class="collapse" id="faq2">
-                            <div class="faq-answer">
-                                {% trans "Да, в колледже предусмотрена бюджетная форма обучения — бесплатно. Также доступна контрактная форма обучения. Количество бюджетных мест уточняйте в приёмной комиссии." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
-                            <span>{% trans "Каков срок обучения?" %}</span>
-                            <i class="fas fa-plus faq-icon"></i>
-                        </button>
-                        <div class="collapse" id="faq3">
-                            <div class="faq-answer">
-                                {% trans "Срок обучения по большинству специальностей составляет 2 года 10 месяцев на базе 9 классов. На базе 11 классов — от 1 до 2 лет 10 месяцев в зависимости от выбранной специальности." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
-                            <span>{% trans "Проводится ли практика в больницах?" %}</span>
-                            <i class="fas fa-plus faq-icon"></i>
-                        </button>
-                        <div class="collapse" id="faq4">
-                            <div class="faq-answer">
-                                {% trans "Да, практическая подготовка является ключевой частью учебного процесса. Студенты проходят практику в ведущих учреждениях здравоохранения Джалал-Абадской области, что обеспечивает реальный профессиональный опыт." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
-                            <span>{% trans "Когда начинается приём документов?" %}</span>
-                            <i class="fas fa-plus faq-icon"></i>
-                        </button>
-                        <div class="collapse" id="faq5">
-                            <div class="faq-answer">
-                                {% trans "Приём документов традиционно начинается в июне и продолжается до конца августа. Зачисление проходит в августе–сентябре. Учебный год начинается 1 сентября. Актуальные сроки уточняйте в приёмной комиссии." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
-                            <span>{% trans "Помогают ли с трудоустройством после окончания?" %}</span>
-                            <i class="fas fa-plus faq-icon"></i>
-                        </button>
-                        <div class="collapse" id="faq6">
-                            <div class="faq-answer">
-                                {% trans "Колледж активно содействует трудоустройству выпускников. Большинство наших студентов устраивается на работу ещё во время прохождения практики. Колледж поддерживает тесные связи с работодателями в сфере здравоохранения." %}
-                            </div>
-                        </div>
+                    {% empty %}
+                    <p class="text-center text-muted">{% trans "Вопросы появятся здесь после добавления через панель администратора." %}</p>
+                    {% endfor %}
                     </div>
 
                 </div>

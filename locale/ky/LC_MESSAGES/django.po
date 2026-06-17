@@ -2,349 +2,1936 @@
 # Кыргыз тили котормолору.
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 10:16+0000\n"
+"Language: ky\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ky\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # ── base.html ──────────────────────────────────────────────────────────────────
-
+#: templates/base.html:7 templates/base.html:169
+#: templates/main/news_detail.html:4
 msgid "Кочкор-Атинский региональный колледж"
 msgstr "Кочкор-Ата аймактык колледжи"
 
-msgid "Кочкор-Атинский региональный колледж — подготовка медицинских специалистов в Кыргызской Республике."
-msgstr "Кочкор-Ата аймактык колледжи — Кыргыз Республикасынын ден соолук сактоо адистерин даярдоо."
+#: templates/base.html:8
+msgid ""
+"Кочкор-Атинский региональный колледж — подготовка медицинских специалистов в "
+"Кыргызской Республике."
+msgstr ""
+"Кочкор-Ата аймактык колледжи — Кыргыз Республикасынын ден соолук сактоо "
+"адистерин даярдоо."
 
-msgid "КА Региональный Колледж"
-msgstr "КА Аймактык Колледжи"
-
-msgid "Кыргызская Республика"
-msgstr "Кыргыз Республикасы"
-
-msgid "Кыргызская Республика, Джалал-Абадская обл., г. Кочкор-Ата"
-msgstr "Кыргыз Республикасы, Жалал-Абад облусу, Кочкор-Ата ш."
-
+#: templates/base.html:88
 msgid "Главная"
 msgstr "Башкы бет"
 
+#: templates/base.html:89 templates/base.html:131
 msgid "О колледже"
 msgstr "Колледж жөнүндө"
 
+#: templates/base.html:90 templates/base.html:132 templates/base.html:141
+#: templates/main/index.html:49 templates/main/index.html:58
+#: templates/main/index.html:92 templates/main/index.html:193
 msgid "Специальности"
 msgstr "Адистиктер"
 
+#: templates/base.html:91 templates/base.html:133 templates/main/index.html:468
 msgid "Новости"
 msgstr "Жаңылыктар"
 
+#: templates/base.html:92 templates/base.html:134
 msgid "Галерея"
 msgstr "Галерея"
 
+#: templates/base.html:93 templates/base.html:135 templates/main/index.html:598
 msgid "Абитуриентам"
 msgstr "Абитуриенттерге"
 
-msgid "Министерство"
-msgstr "Министрлик"
-
+#: templates/base.html:95 templates/base.html:137 templates/base.html:150
+#: templates/main/index.html:808 templates/main/index.html:908
 msgid "Контакты"
 msgstr "Байланыш"
 
-msgid "Подготовка квалифицированных специалистов в области здравоохранения для Кыргызской Республики."
-msgstr "Кыргыз Республикасы үчүн ден соолук сактоо чөйрөсүндөгү квалификациялуу адистерди даярдоо."
+#: templates/base.html:122 templates/main/index.html:82
+msgid "КА Региональный Колледж"
+msgstr "КА Аймактык Колледжи"
 
+#: templates/base.html:123
+msgid "Кыргызская Республика"
+msgstr "Кыргыз Республикасы"
+
+#: templates/base.html:126
+msgid ""
+"Подготовка квалифицированных специалистов в области здравоохранения для "
+"Кыргызской Республики."
+msgstr ""
+"Кыргыз Республикасы үчүн ден соолук сактоо чөйрөсүндөгү квалификациялуу "
+"адистерди даярдоо."
+
+#: templates/base.html:129
 msgid "Разделы"
 msgstr "Бөлүмдөр"
 
+#: templates/base.html:143 templates/main/index.html:435
 msgid "Сестринское дело"
 msgstr "Медициналык кам коруу"
 
+#: templates/base.html:144 templates/main/index.html:437
 msgid "Акушерское дело"
 msgstr "Акушердик иш"
 
+#: templates/base.html:145 templates/main/index.html:439
 msgid "Фармация"
 msgstr "Фармация"
 
+#: templates/base.html:146 templates/main/index.html:441
 msgid "Физическая терапия"
 msgstr "Дене терапиясы"
 
+#: templates/base.html:156 templates/base.html:162
 msgid "Пн–Пт: 08:00–17:00"
 msgstr "Дш–Жм: 08:00–17:00"
 
+#: templates/base.html:160
+msgid "Кыргызская Республика, Джалал-Абадская обл., г. Кочкор-Ата"
+msgstr "Кыргыз Республикасы, Жалал-Абад облусу, Кочкор-Ата ш."
+
+#: templates/base.html:169
 msgid "Все права защищены."
 msgstr "Бардык укуктар корголгон."
 
+#: templates/base.html:170
 msgid "Разработано для нужд колледжа"
 msgstr "Колледждин керектөөлөрү үчүн иштелип чыкты"
 
+#: templates/base.html:175
 msgid "Наверх"
 msgstr "Жогору"
 
 # ── index.html ─────────────────────────────────────────────────────────────────
-
+#: templates/main/index.html:3
 msgid "Кочкор-Атинский региональный колледж — Официальный сайт"
 msgstr "Кочкор-Ата аймактык колледжи — Расмий сайт"
 
-msgid "Кочкор-Атинский"
-msgstr "Кочкор-Ата"
-
+#: templates/main/index.html:38
 msgid "Медицинское образование · Кыргызстан"
 msgstr "Медициналык билим берүү · Кыргызстан"
 
+#: templates/main/index.html:40
+msgid "Кочкор-Атинский"
+msgstr "Кочкор-Ата"
+
+#: templates/main/index.html:41
 msgid "Региональный"
 msgstr "Аймактык"
 
+#: templates/main/index.html:42
 msgid "Колледж"
 msgstr "Колледжи"
 
-msgid "Качественная подготовка медицинских специалистов. Современная учебная база, опытные преподаватели и гарантированное трудоустройство."
-msgstr "Медициналык адистерди сапаттуу даярдоо. Заманбап окуу базасы, тажрыйбалуу окутуучулар жана кепилденген жумушка орношуу."
+#: templates/main/index.html:45
+msgid ""
+"Качественная подготовка медицинских специалистов. Современная учебная база, "
+"опытные преподаватели и гарантированное трудоустройство."
+msgstr ""
+"Медициналык адистерди сапаттуу даярдоо. Заманбап окуу базасы, тажрыйбалуу "
+"окутуучулар жана кепилденген жумушка орношуу."
 
-msgid "Наши специальности"
-msgstr "Биздин адистиктер"
-
+#: templates/main/index.html:52 templates/main/index.html:597
 msgid "Поступление"
 msgstr "Кабыл алуу"
 
+#: templates/main/index.html:62 templates/main/index.html:96
+#: templates/main/index.html:200
 msgid "Выпускников"
 msgstr "Бүтүрүүчүлөр"
 
+#: templates/main/index.html:66 templates/main/index.html:100
+#: templates/main/index.html:207
 msgid "Преподавателей"
 msgstr "Окутуучулар"
 
+#: templates/main/index.html:70 templates/main/index.html:237
+#: templates/main/index.html:292
 msgid "Год основания"
 msgstr "Негизделген жылы"
 
-msgid "О нас"
-msgstr "Биз жөнүндө"
+#: templates/main/index.html:83
+#, fuzzy
+#| msgid "Лицензии и документы"
+msgid "Лицензировано МОН КР"
+msgstr "Лицензиялар жана документтер"
 
-msgid "Медицинское образование нового уровня"
-msgstr "Жаңы деңгээлдеги медициналык билим берүү"
+#: templates/main/index.html:86
+#, fuzzy
+#| msgid "Образование"
+msgid "Аккредитован"
+msgstr "Билим берүү"
 
-msgid "Кочкор-Атинский региональный колледж готовит квалифицированных специалистов для системы здравоохранения Кыргызской Республики."
-msgstr "Кочкор-Ата аймактык колледжи Кыргыз Республикасынын ден соолук сактоо системасы үчүн квалификациялуу адистерди даярдайт."
-
+#: templates/main/index.html:105 templates/main/index.html:165
 msgid "Государственная лицензия и аккредитация"
 msgstr "Мамлекеттик лицензия жана аккредитация"
 
-msgid "Современные учебные кабинеты и лаборатории"
-msgstr "Заманбап окуу кабинеттери жана лабораториялары"
-
-msgid "Практика в ведущих учреждениях здравоохранения"
-msgstr "Жетекчи ден соолук сактоо мекемелеринде практика"
-
+#: templates/main/index.html:108 templates/main/index.html:168
 msgid "Бюджетная и контрактная форма обучения"
 msgstr "Бюджеттик жана контракттык окутуу формасы"
 
+#: templates/main/index.html:111 templates/main/index.html:167
+msgid "Практика в ведущих учреждениях здравоохранения"
+msgstr "Жетекчи ден соолук сактоо мекемелеринде практика"
+
+#: templates/main/index.html:114
+msgid "Содействие в трудоустройстве выпускников"
+msgstr "Бутургочулордун жумушка орношуусуна комоктошуу"
+
+#: templates/main/index.html:118
+#, fuzzy
+#| msgid "Необходимые документы"
+msgid "Подать документы"
+msgstr "Зарыл документтер"
+
+#: templates/main/index.html:159
+msgid "О нас"
+msgstr "Биз жөнүндө"
+
+#: templates/main/index.html:160
+msgid "Медицинское образование нового уровня"
+msgstr "Жаңы деңгээлдеги медициналык билим берүү"
+
+#: templates/main/index.html:162 templates/main/index.html:286
+msgid ""
+"Кочкор-Атинский региональный колледж готовит квалифицированных специалистов "
+"для системы здравоохранения Кыргызской Республики."
+msgstr ""
+"Кочкор-Ата аймактык колледжи Кыргыз Республикасынын ден соолук сактоо "
+"системасы үчүн квалификациялуу адистерди даярдайт."
+
+#: templates/main/index.html:166
+msgid "Современные учебные кабинеты и лаборатории"
+msgstr "Заманбап окуу кабинеттери жана лабораториялары"
+
+#: templates/main/index.html:214
 msgid "Учебных кабинетов"
 msgstr "Окуу кабинеттери"
 
+#: templates/main/index.html:224 templates/main/index.html:281
 msgid "История колледжа"
 msgstr "Колледждин тарыхы"
 
+#: templates/main/index.html:244
 msgid "Форма собственности"
 msgstr "Менчик формасы"
 
+#: templates/main/index.html:258
 msgid "Здание и инфраструктура"
 msgstr "Имарат жана инфраструктура"
 
+#: templates/main/index.html:269
 msgid "Материально-техническая база"
 msgstr "Материалдык-техникалык база"
 
+#: templates/main/index.html:305
 msgid "Миссия колледжа"
 msgstr "Колледждин миссиясы"
 
+#: templates/main/index.html:317
 msgid "Лицензии и документы"
 msgstr "Лицензиялар жана документтер"
 
+#: templates/main/index.html:331
 msgid "Скачать"
 msgstr "Жүктөп алуу"
 
-msgid "Лицензия на образовательную деятельность"
-msgstr "Билим берүү иш-аракетине лицензия"
+#: templates/main/index.html:345
+msgid "Колледждин Уставы"
+msgstr "Колледждин Уставы"
 
-msgid "Министерство образования КР"
-msgstr "КРнын Билим берүү министрлиги"
+#: templates/main/index.html:346
+msgid "Билим беруу мекемесинин негизги уставдык документи."
+msgstr "Билим беруу мекемесинин негизги уставдык документи."
 
-msgid "Свидетельство об аккредитации"
-msgstr "Аккредитация жөнүндө күбөлүк"
+#: templates/main/index.html:354
+msgid "Мамлекеттик аккредитация жонундо кубулук"
+msgstr "Мамлекеттик аккредитация жонундо кубулук"
 
-msgid "Агентство по аккредитации"
-msgstr "Аккредитация агенттиги"
+#: templates/main/index.html:355
+msgid "Колледждин билим беруу программаларын аккредитациялоо жонундо кубулук."
+msgstr "Колледждин билим беруу программаларын аккредитациялоо жонундо кубулук."
 
+#: templates/main/index.html:363
+msgid "Билим беруу иш-аракетин жузогу ашыруу укугуна лицензия"
+msgstr "Билим беруу иш-аракетин жузогу ашыруу укугуна лицензия"
+
+#: templates/main/index.html:364
+msgid ""
+"КРнын Билим беруу жана илим министрлиги тарабынан берилген мамлекеттик "
+"лицензия."
+msgstr ""
+
+#: templates/main/index.html:383
 msgid "Образование"
 msgstr "Билим берүү"
 
+#: templates/main/index.html:384
 msgid "Направления подготовки"
 msgstr "Даярдоо багыттары"
 
-msgid "Получите востребованную профессию в области здравоохранения Кыргызской Республики"
-msgstr "Кыргыз Республикасынын ден соолук сактоо чөйрөсүндөгү суроо-талапка ылайык кесип алыңыз"
+#: templates/main/index.html:385
+msgid ""
+"Получите востребованную профессию в области здравоохранения Кыргызской "
+"Республики"
+msgstr ""
+"Биздин бүтүрүүчүлөр Кыргыз Республикасынын алдыңкы ден соолук сактоо "
+"мекемелеринде иштешет"
 
+#: templates/main/index.html:401 templates/main/index.html:435
+#: templates/main/index.html:437 templates/main/index.html:439
+#: templates/main/index.html:441
 msgid "Код"
 msgstr "Коду"
 
+#: templates/main/index.html:409
 msgid "Срок обучения"
 msgstr "Окуу мөөнөтү"
 
+#: templates/main/index.html:416 templates/main/index.html:435
+#: templates/main/index.html:437 templates/main/index.html:439
+#: templates/main/index.html:441
 msgid "Квалификация"
 msgstr "Квалификация"
 
+#: templates/main/index.html:425 templates/main/index.html:435
+#: templates/main/index.html:437 templates/main/index.html:439
+#: templates/main/index.html:441
 msgid "Поступить"
 msgstr "Кабыл алынуу"
 
+#: templates/main/index.html:435 templates/main/index.html:437
+#: templates/main/index.html:439 templates/main/index.html:441
+msgid "Срок"
+msgstr "Мооноту"
+
+#: templates/main/index.html:435 templates/main/index.html:437
+#: templates/main/index.html:439 templates/main/index.html:441
+msgid "г."
+msgstr "ж."
+
+#: templates/main/index.html:435 templates/main/index.html:437
+#: templates/main/index.html:439 templates/main/index.html:441
+msgid "мес."
+msgstr "ай"
+
+#: templates/main/index.html:435
+#, fuzzy
+#| msgid "Медицинская справка (форма 086/у)"
+msgid "Медицинская сестра"
+msgstr "Медициналык справка (086/у формасы)"
+
+#: templates/main/index.html:437
+msgid "Акушер"
+msgstr "Акушер"
+
+#: templates/main/index.html:439
+#, fuzzy
+#| msgid "Фармация"
+msgid "Фармацевт"
+msgstr "Фармация"
+
+#: templates/main/index.html:441
+msgid "Помощник физ. терапевта"
+msgstr "Физ. терапевттин жардамчысы"
+
+#: templates/main/index.html:458
 msgid "Актуально"
 msgstr "Актуалдуу"
 
+#: templates/main/index.html:459
 msgid "Последние новости"
 msgstr "Акыркы жаңылыктар"
 
+#: templates/main/index.html:460
+msgid "Следите за жизнью колледжа и важными событиями"
+msgstr "Колледждин жашоосун жана маанилуу окуяларды байкап туругуз"
+
+#: templates/main/index.html:481
 msgid "Читать далее"
 msgstr "Дагы окуу"
 
+#: templates/main/index.html:499
+msgid "Выпускники"
+msgstr "Бүтүрүүчүлөр"
+
+#: templates/main/index.html:500
+msgid "Истории успеха"
+msgstr "Ийгилик тарыхтары"
+
+#: templates/main/index.html:501
+#, fuzzy
+#| msgid ""
+#| "Получите востребованную профессию в области здравоохранения Кыргызской "
+#| "Республики"
+msgid ""
+"Наши выпускники работают в ведущих учреждениях здравоохранения по всей "
+"Кыргызской Республике"
+msgstr ""
+"Биздин бүтүрүүчүлөр Кыргыз Республикасынын алдыңкы ден соолук сактоо "
+"мекемелеринде иштешет"
+
+#: templates/main/index.html:518
+#, fuzzy
+#| msgid ""
+#| "Фотографии появятся здесь после добавления через панель администратора."
+msgid "Отзывы появятся здесь после добавления через панель администратора."
+msgstr ""
+"Сүрөттөр администратор панели аркылуу кошулгандан кийин бул жерде пайда "
+"болот."
+
+#: templates/main/index.html:531
 msgid "Фотоальбом"
 msgstr "Фотоальбом"
 
-msgid "Галерея колледжа"
-msgstr "Колледждин галереясы"
+#: templates/main/index.html:532
+msgid "Жизнь колледжа"
+msgstr "Колледждин жашоосу"
 
+#: templates/main/index.html:533
+msgid "Учебный процесс, мероприятия и кампус в фотографиях"
+msgstr "Окуу процесси, иш-чаралар жана кампус сурреттерде"
+
+#: templates/main/index.html:539
 msgid "Все"
 msgstr "Баары"
 
+#: templates/main/index.html:583
 msgid "Фотографии пока не добавлены"
 msgstr "Сүрөттөр азырынча кошулган жок"
 
+#: templates/main/index.html:584
 msgid "Фотографии появятся здесь после добавления через панель администратора."
-msgstr "Сүрөттөр администратор панели аркылуу кошулгандан кийин бул жерде пайда болот."
+msgstr ""
+"Сүрөттөр администратор панели аркылуу кошулгандан кийин бул жерде пайда "
+"болот."
 
+#: templates/main/index.html:599
 msgid "Всё, что нужно знать для поступления в колледж"
 msgstr "Колледжге кабыл алынуу үчүн билүү керек болгон баары"
 
+#: templates/main/index.html:606 templates/main/index.html:639
 msgid "Условия приёма"
 msgstr "Кабыл алуу шарттары"
 
+#: templates/main/index.html:612 templates/main/index.html:652
 msgid "Необходимые документы"
 msgstr "Зарыл документтер"
 
+#: templates/main/index.html:618 templates/main/index.html:667
 msgid "Стоимость обучения"
 msgstr "Окутуунун баасы"
 
+#: templates/main/index.html:624 templates/main/index.html:685
 msgid "Сроки подачи документов"
 msgstr "Документтерди берүү мөөнөттөрү"
 
+#: templates/main/index.html:630 templates/main/index.html:698
 msgid "Контакты приёмной комиссии"
 msgstr "Кабыл алуу комиссиясынын байланыштары"
 
+#: templates/main/index.html:642
 msgid "Аттестат об основном или среднем образовании (9 или 11 кл.)"
 msgstr "Негизги же орто билим жөнүндө аттестат (9 же 11-кл.)"
 
+#: templates/main/index.html:643
 msgid "Возраст от 15 лет"
 msgstr "Жашы 15тен жогору"
 
+#: templates/main/index.html:644 templates/main/index.html:658
 msgid "Медицинская справка (форма 086/у)"
 msgstr "Медициналык справка (086/у формасы)"
 
+#: templates/main/index.html:645
 msgid "Гражданство Кыргызской Республики"
 msgstr "Кыргыз Республикасынын жарандыгы"
 
+#: templates/main/index.html:655
 msgid "Заявление на имя директора"
 msgstr "Директордун атына арыз"
 
+#: templates/main/index.html:656
 msgid "Аттестат об образовании (оригинал + копия)"
 msgstr "Билим жөнүндө аттестат (оригинал + көчүрмө)"
 
+#: templates/main/index.html:657
 msgid "Паспорт / ID-карта (копия)"
 msgstr "Паспорт / ID-карта (көчүрмө)"
 
+#: templates/main/index.html:659
 msgid "6 фотографий 3×4 см"
 msgstr "3×4 см өлчөмүндөгү 6 сүрөт"
 
+#: templates/main/index.html:660
 msgid "Флюорография"
 msgstr "Флюорография"
 
+#: templates/main/index.html:672
 msgid "Бюджетная форма"
 msgstr "Бюджеттик форма"
 
+#: templates/main/index.html:672
 msgid "Бесплатно"
 msgstr "Акысыз"
 
+#: templates/main/index.html:676
 msgid "Контрактная форма"
 msgstr "Контракттык форма"
 
+#: templates/main/index.html:676
 msgid "Уточнить в приёмной комиссии"
 msgstr "Кабыл алуу комиссиясынан так маалымат алуу"
 
+#: templates/main/index.html:679
 msgid "Возможна оплата в рассрочку"
 msgstr "Бөлүп төлөө мүмкүнчүлүгү бар"
 
+#: templates/main/index.html:688
 msgid "Июнь — Август"
 msgstr "Июнь — Август"
 
+#: templates/main/index.html:688
 msgid "Приём документов в приёмной комиссии"
 msgstr "Кабыл алуу комиссиясында документтерди кабыл алуу"
 
+#: templates/main/index.html:689
 msgid "Август — Сентябрь"
 msgstr "Август — Сентябрь"
 
+#: templates/main/index.html:689
 msgid "Зачисление, оформление документов"
 msgstr "Кабыл алуу, документтерди тариздөө"
 
+#: templates/main/index.html:690
 msgid "1 сентября"
 msgstr "1-сентябрь"
 
+#: templates/main/index.html:690
 msgid "Начало учебного года"
 msgstr "Окуу жылынын башталышы"
 
+#: templates/main/index.html:701 templates/main/index.html:822
+#: templates/main/index.html:843
 msgid "Адрес"
 msgstr "Дарек"
 
+#: templates/main/index.html:702 templates/main/index.html:826
+#: templates/main/index.html:847
 msgid "Телефон"
 msgstr "Телефон"
 
-msgid "Связь"
-msgstr "Байланыш"
-
-msgid "Контактная информация"
-msgstr "Байланыш маалыматы"
-
-msgid "Режим работы"
-msgstr "Иш режими"
-
-msgid "Пн–Пт: 08:00 — 17:00"
-msgstr "Дш–Жм: 08:00 — 17:00"
-
-msgid "Сб: 09:00 — 13:00"
-msgstr "Иш: 09:00 — 13:00"
-
-msgid "Расположение на карте"
-msgstr "Картадагы жайгашуу"
-
-msgid "Открыть"
-msgstr "Ачуу"
-
-msgid "Кыргызская Республика, Джалал-Абадская область, г. Кочкор-Ата"
-msgstr "Кыргыз Республикасы, Жалал-Абад облусу, Кочкор-Ата ш."
-
+#: templates/main/index.html:740 templates/main/ministry.html:38
 msgid "Официальный сайт"
 msgstr "Расмий сайт"
 
-msgid "Министерство науки, высшего образования и инноваций Кыргызской Республики"
-msgstr "Кыргыз Республикасынын Илим, жогорку билим берүү жана инновациялар министрлиги"
+#: templates/main/index.html:752
+msgid ""
+"Министерство науки, высшего образования и инноваций Кыргызской Республики"
+msgstr ""
+"Кыргыз Республикасынын Илим, жогорку билим берүү жана инновациялар "
+"министрлиги"
 
+#: templates/main/index.html:755
 msgid "Информация о министерстве будет добавлена через панель администратора."
 msgstr "Министрлик жөнүндө маалымат администратор панели аркылуу кошулат."
 
-msgid "Добавить в админке"
-msgstr "Администраторлук бөлүмдө кошуу"
+#: templates/main/index.html:772
+msgid "Часто задаваемые вопросы"
+msgstr "Жыш берилуучу суроолор"
 
+#: templates/main/index.html:773
+msgid "Ответы на самые популярные вопросы абитуриентов"
+msgstr "Абитуриенттердин эн популярдуу суроолоруна жооптор"
+
+#: templates/main/index.html:790
+#, fuzzy
+#| msgid ""
+#| "Фотографии появятся здесь после добавления через панель администратора."
+msgid "Вопросы появятся здесь после добавления через панель администратора."
+msgstr ""
+"Сүрөттөр администратор панели аркылуу кошулгандан кийин бул жерде пайда "
+"болот."
+
+#: templates/main/index.html:807
+msgid "Связь"
+msgstr "Байланыш"
+
+#: templates/main/index.html:809
+msgid "Мы рады ответить на ваши вопросы"
+msgstr "Биз сиздин суроолорунузга жооп берууго кубанычтабыз"
+
+#: templates/main/index.html:816
+msgid "Контактная информация"
+msgstr "Байланыш маалыматы"
+
+#: templates/main/index.html:835 templates/main/index.html:855
+msgid "Режим работы"
+msgstr "Иш режими"
+
+#: templates/main/index.html:836 templates/main/index.html:855
+msgid "Пн–Пт: 08:00 — 17:00"
+msgstr "Дш–Жм: 08:00 — 17:00"
+
+#: templates/main/index.html:837
+msgid "Сб: 09:00 — 13:00"
+msgstr "Иш: 09:00 — 13:00"
+
+#: templates/main/index.html:843
+msgid "Кыргызская Республика, Джалал-Абадская область, г. Кочкор-Ата"
+msgstr "Кыргыз Республикасы, Жалал-Абад облусу, Кочкор-Ата ш."
+
+#: templates/main/index.html:866
+msgid "Расположение на карте"
+msgstr "Картадагы жайгашуу"
+
+#: templates/main/index.html:871
+msgid "Открыть"
+msgstr "Ачуу"
+
+#: templates/main/index.html:895
+#, fuzzy
+#| msgid "Поступление"
+msgid "Поступление 2025"
+msgstr "Кабыл алуу"
+
+#: templates/main/index.html:897
 msgid "Начни своё медицинское образование сегодня"
 msgstr "Бүгүн медициналык билим берүүнүздү баштаңыз"
 
-msgid "Приёмная комиссия работает. Подайте документы и получите консультацию."
-msgstr "Кабыл алуу комиссиясы иштеп жатат. Документтериңизди тапшырып, консультация алыңыз."
+#: templates/main/index.html:900
+#, fuzzy
+#| msgid ""
+#| "Приёмная комиссия работает. Подайте документы и получите консультацию."
+msgid ""
+"Приёмная комиссия работает. Подайте документы и получите бесплатную "
+"консультацию."
+msgstr ""
+"Кабыл алуу комиссиясы иштеп жатат. Документтериңизди тапшырып, консультация "
+"алыңыз."
 
+#: templates/main/index.html:905
 msgid "Условия поступления"
 msgstr "Кабыл алуу шарттары"
 
-# ── news_detail.html ───────────────────────────────────────────────────────────
+#: templates/main/ministry.html:3
+msgid "Министерство"
+msgstr "Министрлик"
 
+# ── news_detail.html ───────────────────────────────────────────────────────────
+#: templates/main/news_detail.html:33
 msgid "Все новости"
 msgstr "Бардык жаңылыктар"
+
+#: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
+msgid "Messages"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:33
+msgid "…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:35
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:36
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:37
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:70
+msgid "Enter a valid domain name."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:153
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:773
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:200
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:211
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.12/site-packages/django/core/validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:309
+#: venv/lib/python3.12/site-packages/django/core/validators.py:318
+#: venv/lib/python3.12/site-packages/django/core/validators.py:332
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:311
+msgid "IPv4"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:320
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:43
+msgid "IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:334
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:514
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:364
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:403
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:659
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1633
+#: venv/lib/python3.12/site-packages/django/forms/models.py:932
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1635
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/constraints.py:20
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:135
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:136
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1161
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1164
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1214
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1216
+msgid "String (unlimited)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1325
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1426
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1430
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1565
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1434
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1561
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1569
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1574
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1701
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1703
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1864
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1868
+msgid "Duration"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1920
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1945
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2025
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2067
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2180
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2188
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2219
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2310
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2364
+msgid "Positive big integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2379
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2394
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2446
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2526
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2530
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2534
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2642
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2666
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2733
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:244
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:24
+msgid "A JSON object"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:26
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:974
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:977
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1271
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1328
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1330
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1378
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to
+#. the label
+#: venv/lib/python3.12/site-packages/django/forms/boundfield.py:188
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:91
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:313
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:484
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1241
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:507
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1242
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:534
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:568
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:569
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:638
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:639
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:640
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:642
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:647
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:715
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:862
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:949
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1621
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:951
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1070
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1619
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1071
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1313
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1343
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:97
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:484
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:491
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:925
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:930
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:937
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:946
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1383
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1474
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1623
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:528
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:529
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:530
+msgid "Change"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:869
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:870
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:871
+msgid "No"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/tasks/base.py:34
+msgctxt "Task"
+msgid "Ready"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/tasks/base.py:36
+msgctxt "Task"
+msgid "Running"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/tasks/base.py:38
+msgctxt "Task"
+msgid "Failed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/tasks/base.py:40
+msgctxt "Task"
+msgid "Successful"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:878
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:908
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:925
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:927
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:929
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:931
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:933
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:935
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:81
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:25
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:26
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:27
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:28
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:29
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:30
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:31
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:32
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:33
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:34
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:35
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:36
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:48
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:282
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.12/site-packages/django/utils/text.py:301
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:135
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:353
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:68
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:8
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:14
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:94
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:102
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:112
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:122
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:126
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:158
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:177
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:406
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:411
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:421
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:441
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:458
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:477
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:483
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:500
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:512
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:520
+msgid "title"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:18
+msgid "password"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:287
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:306
+msgid "title a"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:291
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:317
+msgid "title b"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:295
+msgid "title c"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:299
+msgid "title d"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/models.py:422
+msgid "visits"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/tests/translation.py:74
+msgid "Sorry, translation is not available."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/modeltranslation/widgets.py:32
+msgid "None"
+msgstr ""
+
+#~ msgid "Наши специальности"
+#~ msgstr "Биздин адистиктер"
+
+#~ msgid "Лицензия на образовательную деятельность"
+#~ msgstr "Билим берүү иш-аракетине лицензия"
+
+#~ msgid "Министерство образования КР"
+#~ msgstr "КРнын Билим берүү министрлиги"
+
+#~ msgid "Свидетельство об аккредитации"
+#~ msgstr "Аккредитация жөнүндө күбөлүк"
+
+#~ msgid "Агентство по аккредитации"
+#~ msgstr "Аккредитация агенттиги"
+
+#~ msgid "Галерея колледжа"
+#~ msgstr "Колледждин галереясы"
+
+#~ msgid "Добавить в админке"
+#~ msgstr "Администраторлук бөлүмдө кошуу"

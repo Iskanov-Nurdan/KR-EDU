@@ -75,6 +75,12 @@ class _CompressImageMixin:
 # ── Site-wide settings ────────────────────────────────────────────────────────
 
 class SiteSettings(models.Model):
+    hero_background = models.ImageField(
+        upload_to='site/', blank=True, null=True,
+        verbose_name='Фон главного баннера',
+        help_text='Фоновое изображение для секции Hero на главной странице',
+        validators=[validate_file_size],
+    )
     logo = models.ImageField(
         upload_to='site/', blank=True, null=True,
         verbose_name='Логотип колледжа',
@@ -101,6 +107,16 @@ class SiteSettings(models.Model):
         blank=True,
         verbose_name='Миссия колледжа',
         help_text='Текст миссии — отображается на странице «О колледже»',
+    )
+    graduates_count = models.CharField(
+        max_length=50, default='1000+',
+        verbose_name='Количество выпускников',
+        help_text='Например: 1000+',
+    )
+    teachers_count = models.CharField(
+        max_length=50, default='30+',
+        verbose_name='Количество преподавателей',
+        help_text='Например: 30+',
     )
 
     class Meta:
@@ -304,3 +320,42 @@ class Admission(models.Model):
 
     def __str__(self):
         return 'Информация для абитуриентов'
+
+
+# ── Testimonial ──────────────────────────────────────────────────────────────
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=255, verbose_name='Имя выпускника')
+    role = models.CharField(max_length=255, verbose_name='Должность / город', help_text='Например: Медицинская сестра · Ош')
+    text = models.TextField(verbose_name='Текст отзыва')
+    icon = models.CharField(
+        max_length=50, default='fa-user-nurse',
+        verbose_name='Иконка (Font Awesome класс)',
+        help_text='Например: fa-user-nurse, fa-baby, fa-pills, fa-heartbeat',
+    )
+    rating = models.PositiveSmallIntegerField(default=5, verbose_name='Рейтинг (1-5)')
+    order = models.PositiveIntegerField(default=0, verbose_name='Порядок отображения')
+
+    class Meta:
+        verbose_name = 'Отзыв выпускника'
+        verbose_name_plural = 'Отзывы выпускников'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.name
+
+
+# ── FAQ ──────────────────────────────────────────────────────────────────────
+
+class FAQ(models.Model):
+    question = models.CharField(max_length=500, verbose_name='Вопрос')
+    answer = models.TextField(verbose_name='Ответ')
+    order = models.PositiveIntegerField(default=0, verbose_name='Порядок отображения')
+
+    class Meta:
+        verbose_name = 'Вопрос (FAQ)'
+        verbose_name_plural = 'Часто задаваемые вопросы (FAQ)'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.question

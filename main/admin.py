@@ -7,6 +7,7 @@ from tinymce.widgets import TinyMCE
 from .models import (
     SiteSettings, MinistryPage, Specialty, News,
     Gallery, GalleryCategory, Contact, CollegeInfo, Document, Admission,
+    Testimonial, FAQ,
 )
 
 TINYMCE_OVERRIDES = {
@@ -30,8 +31,14 @@ class SiteSettingsAdmin(TranslationAdmin):
     formfield_overrides = TINYMCE_OVERRIDES
 
     fieldsets = (
+        ('Фон главного баннера', {
+            'fields': ('hero_background',),
+        }),
         ('Логотип и иконка', {
             'fields': ('logo', 'favicon'),
+        }),
+        ('Статистика на главной странице', {
+            'fields': ('graduates_count', 'teachers_count'),
         }),
         ('Русский язык (РУС)', {
             'fields': ('college_name_ru', 'subtitle_ru', 'mission_ru'),
@@ -323,3 +330,52 @@ class AdmissionAdmin(TranslationAdmin):
 
     def has_add_permission(self, request):
         return not Admission.objects.exists()
+
+
+# ── Testimonial ────────────────────────────────────────────────────────────────
+
+@admin.register(Testimonial)
+class TestimonialAdmin(TranslationAdmin):
+    list_display = ('name', 'role', 'rating', 'order')
+    list_editable = ('order',)
+    search_fields = ('name_ru', 'name_ky')
+    list_per_page = 20
+    save_on_top = True
+
+    fieldsets = (
+        ('Общее', {
+            'fields': ('icon', 'rating', 'order'),
+        }),
+        ('Русский язык (РУС)', {
+            'fields': ('name_ru', 'role_ru', 'text_ru'),
+        }),
+        ('Кыргызский язык (КЫР)', {
+            'fields': ('name_ky', 'role_ky', 'text_ky'),
+            'classes': ('collapse',),
+        }),
+    )
+
+
+# ── FAQ ────────────────────────────────────────────────────────────────────────
+
+@admin.register(FAQ)
+class FAQAdmin(TranslationAdmin):
+    list_display = ('question', 'order')
+    list_editable = ('order',)
+    search_fields = ('question_ru', 'question_ky')
+    list_per_page = 20
+    save_on_top = True
+    formfield_overrides = TINYMCE_OVERRIDES
+
+    fieldsets = (
+        ('Общее', {
+            'fields': ('order',),
+        }),
+        ('Русский язык (РУС)', {
+            'fields': ('question_ru', 'answer_ru'),
+        }),
+        ('Кыргызский язык (КЫР)', {
+            'fields': ('question_ky', 'answer_ky'),
+            'classes': ('collapse',),
+        }),
+    )

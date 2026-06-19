@@ -38,7 +38,7 @@ class SiteSettingsAdmin(TranslationAdmin):
             'fields': ('logo', 'favicon'),
         }),
         ('Статистика на главной странице', {
-            'fields': ('graduates_count', 'teachers_count'),
+            'fields': ('graduates_count', 'teachers_count', 'classrooms_count'),
         }),
         ('Русский язык (РУС)', {
             'fields': ('college_name_ru', 'subtitle_ru', 'mission_ru'),

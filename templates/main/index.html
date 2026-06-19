@@ -166,28 +166,28 @@
             <div class="col-6 col-md-3" data-reveal data-delay="1">
                 <div class="bento-stat">
                     <div class="bento-stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="bento-stat-num" data-count="4">0</div>
+                    <div class="bento-stat-num" data-count="{{ specialties.count|default:4 }}">0</div>
                     <div class="bento-stat-lbl">{% trans "Специальности" %}</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-reveal data-delay="2">
                 <div class="bento-stat">
                     <div class="bento-stat-icon"><i class="fas fa-user-graduate"></i></div>
-                    <div class="bento-stat-num" data-count="1000">0</div>
+                    <div class="bento-stat-num" data-count="{{ site_settings.graduates_count|default:1000 }}">0</div>
                     <div class="bento-stat-lbl">{% trans "Выпускников" %}</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-reveal data-delay="3">
                 <div class="bento-stat">
                     <div class="bento-stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <div class="bento-stat-num" data-count="30">0</div>
+                    <div class="bento-stat-num" data-count="{{ site_settings.teachers_count|default:30 }}">0</div>
                     <div class="bento-stat-lbl">{% trans "Преподавателей" %}</div>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-reveal data-delay="4">
                 <div class="bento-stat">
                     <div class="bento-stat-icon"><i class="fas fa-door-open"></i></div>
-                    <div class="bento-stat-num" data-count="12">0</div>
+                    <div class="bento-stat-num" data-count="{{ site_settings.classrooms_count|default:12 }}">0</div>
                     <div class="bento-stat-lbl">{% trans "Учебных кабинетов" %}</div>
                 </div>
             </div>

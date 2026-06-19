@@ -118,6 +118,11 @@ class SiteSettings(models.Model):
         verbose_name='Количество преподавателей',
         help_text='Например: 30+',
     )
+    classrooms_count = models.CharField(
+        max_length=50, default='12',
+        verbose_name='Количество учебных кабинетов',
+        help_text='Например: 12',
+    )
 
     class Meta:
         verbose_name = 'Настройки сайта'

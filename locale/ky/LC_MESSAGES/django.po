@@ -159,14 +159,10 @@ msgid "Год основания"
 msgstr "Негизделген жылы"
 
 #: templates/main/index.html:83
-#, fuzzy
-#| msgid "Лицензии и документы"
 msgid "Лицензировано МОН КР"
 msgstr "Лицензиялар жана документтер"
 
 #: templates/main/index.html:86
-#, fuzzy
-#| msgid "Образование"
 msgid "Аккредитован"
 msgstr "Билим берүү"
 
@@ -187,8 +183,6 @@ msgid "Содействие в трудоустройстве выпускник
 msgstr "Бутургочулордун жумушка орношуусуна комоктошуу"
 
 #: templates/main/index.html:118
-#, fuzzy
-#| msgid "Необходимые документы"
 msgid "Подать документы"
 msgstr "Зарыл документтер"
 
@@ -324,8 +318,6 @@ msgid "мес."
 msgstr "ай"
 
 #: templates/main/index.html:435
-#, fuzzy
-#| msgid "Медицинская справка (форма 086/у)"
 msgid "Медицинская сестра"
 msgstr "Медициналык справка (086/у формасы)"
 
@@ -334,8 +326,6 @@ msgid "Акушер"
 msgstr "Акушер"
 
 #: templates/main/index.html:439
-#, fuzzy
-#| msgid "Фармация"
 msgid "Фармацевт"
 msgstr "Фармация"
 
@@ -597,8 +587,6 @@ msgid "Открыть"
 msgstr "Ачуу"
 
 #: templates/main/index.html:895
-#, fuzzy
-#| msgid "Поступление"
 msgid "Поступление 2025"
 msgstr "Кабыл алуу"
 

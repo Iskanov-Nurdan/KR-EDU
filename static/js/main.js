@@ -205,9 +205,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ── Scroll spy ────────────────────────────────────────────────────────────
     if (isIndex) {
-        const sections = Array.from(document.querySelectorAll('section[id]'));
-        const navLinks = document.querySelectorAll('.main-nav a[data-section]');
-
+        const sectionEls = Array.from(document.querySelectorAll("section[id]"));
+        const extraEls = Array.from(document.querySelectorAll("[data-section-anchor]"));
+        const sections = [...sectionEls, ...extraEls].sort((a, b) => a.offsetTop - b.offsetTop);
+        const navLinks = document.querySelectorAll(".main-nav a[data-section]");
         function updateActive() {
             const scrollMid = window.scrollY + NAV_H + window.innerHeight * 0.25;
             let current = sections[0];
@@ -215,11 +216,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (s.offsetTop <= scrollMid) current = s;
             }
             navLinks.forEach(link => {
-                link.classList.toggle('active', link.dataset.section === current?.id);
+                let isActive = link.dataset.section === current?.id;
+                if (current?.id === 'documents' && link.dataset.section === 'about') isActive = false;
+                link.classList.toggle("active", isActive);
             });
         }
-
-        window.addEventListener('scroll', updateActive, { passive: true });
+        window.addEventListener("scroll", updateActive, { passive: true });
         updateActive();
     }
 
@@ -340,3 +342,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+// ── Documents carousel scroll buttons ──────────────────────────────────
+(function () {
+    const carousel = document.getElementById('docsCarousel');
+    const btnLeft = document.getElementById('docsScrollLeft');
+    const btnRight = document.getElementById('docsScrollRight');
+    if (!carousel || !btnLeft || !btnRight) return;
+
+    const scrollAmount = 300;
+
+    btnLeft.addEventListener('click', function () {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnRight.addEventListener('click', function () {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+})();
+
